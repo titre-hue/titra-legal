@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>titra â Privacy Policy</title>
+  <title>titra — Privacy Policy</title>
   <style>
     body { font-family: -apple-system, system-ui, 'Segoe UI', sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.7; color: #1e293b; background: #fafafa; }
     h1 { color: #0f172a; font-size: 1.8rem; }
@@ -12,119 +12,218 @@
     a { color: #0ea5e9; }
     .updated { color: #64748b; font-size: 0.9rem; }
     .container { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 1rem 0; }
+    th { padding: 8px 10px; border: 1px solid #e2e8f0; background: #f1f5f9; text-align: left; }
+    td { padding: 8px 10px; border: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #fafafa; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>titra â Privacy Policy</h1>
-    <p class="updated">Last updated: 15 March 2026</p>
+    <h1>titra — Privacy Policy</h1>
+    <p class="updated">Last updated: 20 March 2026</p>
 
-    <h2>The Short Version</h2>
-    <p><strong>Your health data is stored on your device by default. Optional features like cloud sync, community insights, and analytics require your explicit consent. Your personal data is never sold.</strong> titra does not sell, share, or rent your personal or health data to anyone. Here is what you need to know:</p>
-    <ul style="margin: 0.8rem 0; padding-left: 1.4rem; line-height: 2;">
-      <li>All data is stored locally on your device by default â nothing leaves your phone unless you turn on Cloud Sync.</li>
-      <li>If you turn on Cloud Sync, your data is encrypted before it leaves your device and stored securely on servers in the US (AWS).</li>
-      <li>We do not track your location, read your contacts, or access your camera.</li>
-      <li>Community Insights is <strong>100% opt-in</strong> and only ever shares anonymised averages â never your actual weight, name, or any identifier.</li>
-      <li>You can delete everything â local and cloud â from the app at any time.</li>
-      <li>We use a small number of third-party services (listed in full below). None of them receive your health data for advertising.</li>
-    </ul>
-    <p>The full legal details follow. If something is unclear, email us at <a href="mailto:tetra-app@outlook.com">tetra-app@outlook.com</a>.</p>
+    <h2>Introduction</h2>
+    <p>titra is a GLP-1 medication tracking app. Using it means sharing some information with us — and depending on the features you enable, with a small number of service providers that help us run the app. We take that responsibility seriously.</p>
+    <p>This policy explains what we collect, how we use it, who we share it with, and your rights. We've kept it as plain as possible.</p>
+    <p>Questions? Email <a href="mailto:tetra-app@outlook.com">tetra-app@outlook.com</a>.</p>
 
-    <h2>What titra Does</h2>
-    <p>titra is a GLP-1 medication tracking app that helps you log doses, track side effects, and monitor your treatment journey. Your health is personal, and we treat your data that way.</p>
+    <h2>What We Collect (and Why)</h2>
 
-    <h2>Data We Collect</h2>
-    <p>titra stores your medication doses, side effects, weight entries, and app preferences. All data is stored locally on your device by default. If you enable Cloud Sync, your data is encrypted and stored via Supabase (hosted on AWS). We do not collect your name, email address, or any personal identifiers unless you create a Cloud Sync account.</p>
+    <p><strong>Health data (optional)</strong> — If you choose to track your health in titra, we process the information you enter: medication doses, injection sites, side effects and notes, weight entries, and any wellness data you add. This is used solely to provide the app's tracking and insight features. If you enable Cloud Sync, this data is encrypted and stored on our servers (Supabase, hosted on AWS). Without Cloud Sync, everything stays on your device.</p>
 
-    <h2>Data We Do Not Collect</h2>
-    <p>We do not access your camera, contacts, location, photos, or files. We do not sell your personal data, share it with advertisers, or transfer it to data brokers.</p>
+    <p><strong>Account information (Cloud Sync only)</strong> — If you create a Cloud Sync account, we collect an email address and generate an account ID. Without Cloud Sync there is no account and no identifier stored on our servers.</p>
 
-    <h2>Health Data</h2>
-    <p>titra processes sensitive health information including medication dosages, side effects, and body weight. This data is used solely to provide you with tracking and insight features within the app. Your personal records are never shared with third parties, advertisers, or data brokers.</p>
+    <p><strong>Apple Health / Health Connect (optional)</strong> — With your explicit permission, titra can import steps, active calories, resting heart rate, and sleep data from Apple Health or Android Health Connect. This data is displayed locally in the app. If you opt in to Community Insights, anonymised averages (rounded to broad buckets) may be included in your community snapshot. Raw health data from these integrations is not transmitted to our servers.</p>
 
-    <h2>Community Insights (Anonymous Data Sharing)</h2>
-    <p>If you opt in to Community Insights, titra submits a weekly anonymous snapshot to help build real-world benchmarks for GLP-1 medications. This is entirely optional and can be toggled on or off at any time in Settings.</p>
+    <p><strong>Community Insights data (opt-in only)</strong> — If you choose to participate, titra submits a weekly anonymous snapshot to support aggregated benchmarks across GLP-1 users. See the Community Insights section below for full detail on what is and is not included.</p>
+
+    <p><strong>Analytics</strong> — We use PostHog (EU Cloud) to understand how features are used and improve the app. Analytics events include things like "dose logged" or "export used" — they do not include health entries, medication details, or free-text notes. If you are signed in with Cloud Sync, events are associated with your Supabase account ID. You can opt out of analytics at any time in Settings.</p>
+
+    <p><strong>Crash and error reporting</strong> — We use Sentry to capture crashes and errors so we can fix them. Sentry may automatically collect device type, OS version, app version, IP address, and a session identifier as part of standard crash context. We apply scrubbing rules to reduce unnecessary data capture, but standard crash reporting metadata — including IP address — may be processed by Sentry. No health data or free-text content is included in crash reports.</p>
+
+    <p><strong>Subscription information</strong> — Subscriptions are processed by Google Play or the Apple App Store. We do not receive your payment card details. Subscription status is managed through RevenueCat, which receives only an anonymous app user ID and subscription metadata.</p>
+
+    <p><strong>Device and technical information</strong> — We and our service providers may automatically collect limited technical information such as device type, OS version, app version, and network metadata. This is used to keep the app reliable and secure.</p>
+
+    <h2>Community Insights (Anonymous Data)</h2>
+    <p>Community Insights is entirely opt-in and can be toggled on or off at any time in Settings.</p>
     <p><strong>What is shared (all anonymous):</strong> Medication type and dose, weight change since starting (not your actual weight), BMI category (not exact BMI), side effect types and severity, gender and age range, adherence percentage, weekly goal, and if Health Sync is enabled: rounded averages of steps, sleep, heart rate, and active calories.</p>
-    <p><strong>What is never shared:</strong> Your name, email, device ID, IP address, exact weight, height, or date of birth, free-text notes, location, or Supabase user ID. Community data uses a random anonymous cohort ID generated per app install â it is not linked to your user account in any way.</p>
-    <p>Community data is stored in a separate Supabase table with no connection to user accounts. Benchmark results are only shown when at least 10 anonymous users exist for a given medication and dose combination.</p>
+    <p><strong>What is never shared:</strong> Your name, email, device ID, exact weight, height, date of birth, free-text notes, location, or Supabase account ID. Community data uses a random anonymous cohort ID generated per app install — it is not linked to your account in any way.</p>
+    <p>Community data is stored in a separate Supabase table with no connection to user accounts. Aggregated benchmark results are only shown when at least 10 anonymous users exist for a given medication and dose combination.</p>
+    <p>Because this data is designed to be anonymous and is not maintained in a way intended to be linked back to a specific person, we may not be able to locate or delete specific historical community records for an individual. You can always opt out to stop future collection.</p>
 
-    <p>Anonymised, aggregated statistical insights derived from community data (for example, population-level trends in GLP-1 medication adherence or side effect timing) may be used for research purposes or shared with research partners. These insights are mathematically aggregated and cannot be used to identify any individual. No personal data, individual records, or identifiable health history is ever included.</p>
+    <h2>How We Use Your Data</h2>
+    <p>We use your data to provide titra's features, keep the app reliable and secure, understand how features are used so we can improve them, manage your subscription, and comply with legal obligations.</p>
+    <p>We do not use your health data for targeted advertising. We do not share your health entries with advertising networks or data brokers.</p>
+    <p>We may in the future use aggregated, anonymised data — such as anonymised community insights — for purposes including research partnerships or product development. If we do this, it will be based on data that is designed not to be linkable back to you, and we will update this policy accordingly.</p>
 
-        <h2>Analytics</h2>
-    <p>titra uses PostHog (EU Cloud) for product analytics to help us understand how features are used and improve the app. Analytics data includes feature usage events (e.g. "dose logged", "export used") and is associated with your Supabase user ID if you are signed in. No health data, medication details, or personal identifiers are included in analytics events. PostHog data is hosted in the EU for GDPR compliance.</p>
+    <h2>Legal Bases for Processing (EEA/UK)</h2>
+    <p>If you are in the European Economic Area or the United Kingdom, we process your information under the following legal bases:</p>
+    <ul style="padding-left: 1.4rem; line-height: 2;">
+      <li><strong>Contract:</strong> To provide titra's core features — saving your data, enabling sync, delivering subscription features.</li>
+      <li><strong>Legitimate interests:</strong> To keep titra reliable and secure, debug issues, improve performance, and understand how the app is used (including anonymised analytics) so we can improve it.</li>
+      <li><strong>Consent:</strong> For optional features where consent is required — Health Connect / Apple Health imports, Community Insights, and certain analytics. You can withdraw consent at any time in Settings.</li>
+      <li><strong>Legal obligation:</strong> To comply with applicable laws and respond to lawful requests.</li>
+    </ul>
 
-    <h2>Health Connect / Apple Health</h2>
-    <p>If you connect Google Health Connect or Apple HealthKit, titra reads steps, active calories, resting heart rate, and sleep data from your device. This data is displayed locally in the app and, if you opt in to Community Insights, anonymised averages (rounded to broad buckets) may be included in your weekly community snapshot. Raw health data is never transmitted to our servers.</p>
-
-    <h2>Subscriptions</h2>
-    <p>titra+ subscriptions are processed by Google Play or the Apple App Store. We do not see or store your payment details. Subscription status is managed through RevenueCat, which receives only an anonymous app user ID â no personal or health data.</p>
-
-    <h2>Smart Insights Features</h2>
-    <p>titra+ includes tracking features such as the Medication Level Tracker, Side Effect Patterns, and Dose Journey Planner. These run entirely on your device using pharmacokinetic models â your data is never sent to external services or cloud processing.</p>
-
-    <h2>Security</h2>
-    <p>App lock uses a PIN hashed with SHA-256 â your PIN is never stored in plain text. Biometric authentication is handled by your device's secure enclave. Cloud Sync data is transmitted over TLS and stored encrypted at rest.</p>
-
-    <h2>Data Retention and Deletion</h2>
-    <p>You can delete all local data from Settings at any time. If you use Cloud Sync, you can also delete your cloud data from within the app. Deletion is permanent and cannot be undone. If you uninstall titra without deleting cloud data, you may request deletion by contacting us.</p>
-
-    <h2>Third-Party Services</h2>
-    <p>titra uses the following third-party services. This list is provided in full to comply with applicable privacy laws including the Washington My Health My Data Act (MHMD Act) and similar state statutes that require explicit disclosure of all processors who receive health-related data.</p>
-    <table style="width:100%; border-collapse:collapse; font-size:0.92rem; margin: 1rem 0;">
+    <h2>Where We Store Your Data</h2>
+    <table>
       <thead>
-        <tr style="background:#f1f5f9; text-align:left;">
-          <th style="padding:8px 10px; border:1px solid #e2e8f0;">Service</th>
-          <th style="padding:8px 10px; border:1px solid #e2e8f0;">Purpose</th>
-          <th style="padding:8px 10px; border:1px solid #e2e8f0;">Data received</th>
-          <th style="padding:8px 10px; border:1px solid #e2e8f0;">Health data?</th>
-          <th style="padding:8px 10px; border:1px solid #e2e8f0;">Policy</th>
+        <tr>
+          <th>Data</th>
+          <th>Where</th>
+          <th>Notes</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><strong>Supabase</strong> (AWS us-east-1)</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Cloud sync &amp; community insights storage</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Encrypted health data (if sync enabled); anonymous cohort snapshots (if Community Insights enabled)</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Yes â encrypted at rest and in transit</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><a href="https://supabase.com/privacy">supabase.com/privacy</a></td>
-        </tr>
-        <tr style="background:#fafafa;">
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><strong>RevenueCat</strong></td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Subscription management</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Anonymous app user ID and subscription status only</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">No</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
+          <td>Health entries (no sync)</td>
+          <td>On your device only</td>
+          <td>Nothing leaves your phone</td>
         </tr>
         <tr>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><strong>PostHog</strong> (EU Cloud)</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Product analytics</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Feature usage events (e.g. "dose logged") and anonymous identifiers. No health data.</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">No</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><a href="https://posthog.com/privacy">posthog.com/privacy</a></td>
+          <td>Health entries (Cloud Sync)</td>
+          <td>Supabase (AWS us-east-1)</td>
+          <td>Encrypted in transit and at rest</td>
         </tr>
-        <tr style="background:#fafafa;">
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><strong>Sentry</strong></td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Crash and error reporting</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">Stack traces, device OS/version, anonymous session ID. No health data, no PII. Scrubbing rules are applied before transmission.</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;">No</td>
-          <td style="padding:8px 10px; border:1px solid #e2e8f0;"><a href="https://sentry.io/privacy/">sentry.io/privacy</a></td>
+        <tr>
+          <td>Community Insights data</td>
+          <td>Supabase (AWS us-east-1)</td>
+          <td>Separate table, no link to accounts</td>
+        </tr>
+        <tr>
+          <td>Analytics</td>
+          <td>PostHog (EU Cloud)</td>
+          <td>No health data included</td>
+        </tr>
+        <tr>
+          <td>Crash reports</td>
+          <td>Sentry (US)</td>
+          <td>May include device metadata and IP address</td>
+        </tr>
+        <tr>
+          <td>Subscription status</td>
+          <td>RevenueCat</td>
+          <td>Anonymous ID and subscription metadata only</td>
         </tr>
       </tbody>
     </table>
-    <p>We do not use advertising networks, data brokers, or any service that monetises user data. If we add a new third-party service, this list will be updated and an in-app notice will be shown.</p>
 
-    <h2>Children</h2>
-    <p>titra is not intended for use by anyone under 18. We do not knowingly collect data from minors.</p>
+    <h2>International Data Transfers</h2>
+    <p>Your data may be stored or processed in the United States or other locations where our service providers operate. Where required — for example under GDPR — we rely on appropriate safeguards such as Standard Contractual Clauses (SCCs) approved by regulators to protect data transferred internationally.</p>
+
+    <h2>How Long We Keep Your Data</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>Retention</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>On-device health data</td>
+          <td>Until you delete it or uninstall the app</td>
+        </tr>
+        <tr>
+          <td>Cloud Sync health data</td>
+          <td>Until you delete your account or request deletion</td>
+        </tr>
+        <tr>
+          <td>Community Insights data</td>
+          <td>Kept as long as reasonably necessary for product improvement and benchmarking</td>
+        </tr>
+        <tr>
+          <td>Analytics</td>
+          <td>Retained per PostHog standard retention settings</td>
+        </tr>
+        <tr>
+          <td>Crash logs</td>
+          <td>Retained for a limited period for debugging, then deleted or aggregated</td>
+        </tr>
+        <tr>
+          <td>Subscription records</td>
+          <td>Retained as required to manage subscriptions and resolve disputes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Third-Party Services</h2>
+    <p>titra uses the following third-party services. This list is provided in full to comply with applicable privacy laws including the Washington My Health My Data Act and similar statutes requiring explicit disclosure of all processors.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Purpose</th>
+          <th>Data received</th>
+          <th>Health data?</th>
+          <th>Policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Supabase</strong> (AWS us-east-1)</td>
+          <td>Cloud sync &amp; community data storage</td>
+          <td>Encrypted health data (if sync enabled); anonymous community snapshots (if opted in)</td>
+          <td>Yes — encrypted at rest and in transit</td>
+          <td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>RevenueCat</strong></td>
+          <td>Subscription management</td>
+          <td>Anonymous app user ID and subscription status only</td>
+          <td>No</td>
+          <td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>PostHog</strong> (EU Cloud)</td>
+          <td>Product analytics</td>
+          <td>Feature usage events and account ID if signed in. No health data or free-text content.</td>
+          <td>No</td>
+          <td><a href="https://posthog.com/privacy">posthog.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Sentry</strong></td>
+          <td>Crash and error reporting</td>
+          <td>Stack traces, device OS/version, app version, session identifier, and standard crash metadata which may include IP address. No health data or free-text content.</td>
+          <td>No</td>
+          <td><a href="https://sentry.io/privacy/">sentry.io/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>We do not use advertising networks or data brokers. If we add a new third-party service, this list will be updated and an in-app notice will be shown.</p>
+
+    <h2>Who We Share Data With</h2>
+    <p>We share data only with the service providers listed above, who are permitted to use it only to provide their services to us. We do not sell your personal data or health data. We do not share your health entries with advertisers.</p>
+    <p>We may share aggregated, anonymised data (such as anonymised community benchmarks) with partners for research or product development purposes in the future. This would involve data that is not intended to be linkable back to you as an individual.</p>
+    <p>We may also disclose information if required by law, legal process, or to protect rights, safety, and security.</p>
+    <p><strong>Corporate transactions:</strong> If titra is involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction. We will provide notice where required by law.</p>
+
+    <h2>Smart Insights Features</h2>
+    <p>titra+ includes features such as the Medication Level Tracker, Side Effect Patterns, and Dose Journey Planner. These run entirely on your device using pharmacokinetic models — your data is not sent to external services for processing.</p>
+
+    <h2>Security</h2>
+    <p>App lock uses a PIN hashed with SHA-256 — your PIN is never stored in plain text. Biometric authentication is handled by your device's secure enclave. Cloud Sync data is transmitted over TLS and stored encrypted at rest. No method of transmission or storage is 100% secure, but we work hard to protect your information.</p>
+
+    <h2>Your Privacy Choices</h2>
+    <p>You can manage many choices directly in the app's Settings, including exporting or deleting your data, opting out of Community Insights, and opting out of product analytics. You can also email us to make a data request.</p>
 
     <h2>Your Rights</h2>
-    <p>You have the right to access, correct, or delete your personal data at any time. If you are in the EU/EEA, you have additional rights under GDPR including data portability and the right to lodge a complaint with a supervisory authority. If you are in California, you have rights under the CCPA including the right to know what data is collected and the right to opt out of data sales (we do not sell data).</p>
+    <p>Depending on where you live, you may have the right to access, correct, export, or delete your personal data, restrict or object to certain uses, and withdraw consent at any time. If you are in the EU/EEA, you also have rights under GDPR including data portability and the right to lodge a complaint with a supervisory authority. If you are in California, you have rights under the CCPA. If you are in Washington state or Nevada, you have rights under health data privacy laws specific to those states.</p>
+    <p>To exercise any of these rights, use the Settings screen in the app or contact us at <a href="mailto:tetra-app@outlook.com">tetra-app@outlook.com</a>. We may need to verify your request before fulfilling it. If we deny a request you can appeal by replying to our response, and if you are still unsatisfied you may contact your relevant regulator.</p>
+
+    <h2>Children</h2>
+    <p>titra is not intended for children under 13 (or the applicable minimum age in your region). We do not knowingly collect data from children.</p>
+
+    <h2>Data Controller</h2>
+    <p>titra is the data controller responsible for your information under this Privacy Policy. For any privacy questions or requests, contact us at <a href="mailto:tetra-app@outlook.com">tetra-app@outlook.com</a>.</p>
 
     <h2>Changes to This Policy</h2>
     <p>We may update this policy from time to time. The latest version will always be available at this URL. We will notify users of material changes through an in-app notice.</p>
 
     <h2>Contact</h2>
-    <p>Questions about your data or this policy? Reach us at <a href="mailto:tetra-app@outlook.com">tetra-app@outlook.com</a></p>
+    <p>Questions about your data or this policy? Email us at <a href="mailto:tetra-app@outlook.com">tetra-app@outlook.com</a></p>
   </div>
 </body>
 </html>
