@@ -21,11 +21,11 @@
 <body>
   <div class="container">
     <h1>titra — Privacy Policy</h1>
-    <p class="updated">Last updated: 20 March 2026</p>
+    <p class="updated">Last updated: 20 March 2026 (rev. 2)</p>
 
     <h2>Introduction</h2>
     <p>titra is a GLP-1 medication tracking app. Using it means sharing some information with us — and depending on the features you enable, with a small number of service providers that help us run the app. We take that responsibility seriously.</p>
-    <p>This policy explains what we collect, how we use it, who we share it with, and your rights. We have kept it as plain as possible.</p>
+    <p>This policy explains what we collect, how we use it, who we share it with, and your rights. We've kept it as plain as possible.</p>
     <p>Questions? Email <a href="mailto:tetra-app@outlook.com">tetra-app@outlook.com</a>.</p>
 
     <h2>What We Collect (and Why)</h2>
@@ -34,15 +34,13 @@
 
     <p><strong>Account information (Cloud Sync only)</strong> — If you create a Cloud Sync account, we collect an email address and generate an account ID. Without Cloud Sync there is no account and no identifier stored on our servers.</p>
 
-    <p><strong>Apple Health / Health Connect (optional)</strong> — With your explicit permission, titra can import steps, active calories, resting heart rate, and sleep data from Apple Health or Android Health Connect. This data is displayed locally in the app. If you opt in to Community Insights, anonymised averages (rounded to broad buckets) may be included in your community snapshot. Raw health data from these integrations is not transmitted to our servers.</p>
+    <p><strong>Apple Health / Health Connect (optional)</strong> — With your explicit permission, titra can import the following data from Apple Health or Android Health Connect: steps, active and total calories, resting heart rate and heart rate variability, sleep, body weight, body fat percentage, hydration, nutrition (protein and dietary energy), and workout activity. This data is displayed locally in the app. If you opt in to Community Insights, anonymised averages (rounded to broad buckets) of steps, sleep, heart rate, and active calories may be included in your weekly community snapshot — other types are not shared. Raw health data from these integrations is not transmitted to our servers beyond what Community Insights shares.</p>
 
-    <p><strong>Community Insights data (opt-in only)</strong> — If you choose to participate, titra submits a weekly anonymous snapshot to support aggregated benchmarks across GLP-1 users. See the Community Insights section below for full detail on what is and is not included.</p>
+    <p><strong>Community Insights data (opt-in only)</strong> — If you choose to participate, titra submits a weekly anonymous snapshot to support aggregated benchmarks across GLP-1 users. See the Community Insights section below for full detail on what is and isn't included.</p>
 
     <p><strong>Analytics</strong> — We use PostHog (EU Cloud) to understand how features are used and improve the app. Analytics events include things like "dose logged" or "export used" — they do not include health entries, medication details, or free-text notes. If you are signed in with Cloud Sync, events are associated with your Supabase account ID. You can opt out of analytics at any time in Settings.</p>
 
-    <p><strong>Install attribution</strong> — We use AppsFlyer to understand which marketing channels drive app installs. AppsFlyer receives install signals, device type, OS version, app version, and conversion events (such as onboarding completed or subscription started). No health data is ever sent to AppsFlyer.</p>
-
-    <p><strong>Crash and error reporting</strong> — We use Sentry to capture crashes and errors so we can fix them. Sentry may automatically collect device type, OS version, app version, IP address, and a session identifier as part of standard crash context. We apply scrubbing rules to reduce unnecessary data capture, but standard crash reporting metadata — including IP address — may be processed by Sentry. No health data or free-text content is included in crash reports.</p>
+    <p><strong>Crash and error reporting</strong> — We use Sentry to capture crashes and errors so we can fix them. Sentry may automatically collect device type, OS version, app version, IP address, and a session identifier as part of standard crash context. We apply scrubbing rules to reduce unnecessary data capture, but standard crash reporting metadata — including IP address — may be processed by Sentry. No health data or free-text content is included in crash reports. See Sentry's privacy policy for their data handling practices.</p>
 
     <p><strong>Subscription information</strong> — Subscriptions are processed by Google Play or the Apple App Store. We do not receive your payment card details. Subscription status is managed through RevenueCat, which receives only an anonymous app user ID and subscription metadata.</p>
 
@@ -56,7 +54,7 @@
     <p>Because this data is designed to be anonymous and is not maintained in a way intended to be linked back to a specific person, we may not be able to locate or delete specific historical community records for an individual. You can always opt out to stop future collection.</p>
 
     <h2>How We Use Your Data</h2>
-    <p>We use your data to provide titra's features, keep the app reliable and secure, understand how features are used so we can improve them, manage your subscription, measure the effectiveness of our marketing, and comply with legal obligations.</p>
+    <p>We use your data to provide titra's features, keep the app reliable and secure, understand how features are used so we can improve them, manage your subscription, and comply with legal obligations.</p>
     <p>We do not use your health data for targeted advertising. We do not share your health entries with advertising networks or data brokers.</p>
     <p>We may in the future use aggregated, anonymised data — such as anonymised community insights — for purposes including research partnerships or product development. If we do this, it will be based on data that is designed not to be linkable back to you, and we will update this policy accordingly.</p>
 
@@ -64,7 +62,7 @@
     <p>If you are in the European Economic Area or the United Kingdom, we process your information under the following legal bases:</p>
     <ul style="padding-left: 1.4rem; line-height: 2;">
       <li><strong>Contract:</strong> To provide titra's core features — saving your data, enabling sync, delivering subscription features.</li>
-      <li><strong>Legitimate interests:</strong> To keep titra reliable and secure, debug issues, improve performance, understand how the app is used, and measure the effectiveness of our marketing so we can improve it.</li>
+      <li><strong>Legitimate interests:</strong> To keep titra reliable and secure, debug issues, improve performance, and understand how the app is used (including anonymised analytics) so we can improve it.</li>
       <li><strong>Consent:</strong> For optional features where consent is required — Health Connect / Apple Health imports, Community Insights, and certain analytics. You can withdraw consent at any time in Settings.</li>
       <li><strong>Legal obligation:</strong> To comply with applicable laws and respond to lawful requests.</li>
     </ul>
@@ -97,11 +95,6 @@
         <tr>
           <td>Analytics</td>
           <td>PostHog (EU Cloud)</td>
-          <td>No health data included</td>
-        </tr>
-        <tr>
-          <td>Install attribution</td>
-          <td>AppsFlyer (US)</td>
           <td>No health data included</td>
         </tr>
         <tr>
@@ -143,11 +136,7 @@
         </tr>
         <tr>
           <td>Analytics</td>
-          <td>Retained per PostHog standard retention settings</td>
-        </tr>
-        <tr>
-          <td>Attribution data</td>
-          <td>Retained per AppsFlyer standard retention settings</td>
+          <td>Retained per PostHog's standard retention settings</td>
         </tr>
         <tr>
           <td>Crash logs</td>
@@ -190,16 +179,9 @@
         <tr>
           <td><strong>PostHog</strong> (EU Cloud)</td>
           <td>Product analytics</td>
-          <td>Feature usage events and account ID if signed in. No health data or free-text content.</td>
+          <td>Feature usage events (e.g. "dose logged") and account ID if signed in. No health data or free-text content.</td>
           <td>No</td>
           <td><a href="https://posthog.com/privacy">posthog.com/privacy</a></td>
-        </tr>
-        <tr>
-          <td><strong>AppsFlyer</strong></td>
-          <td>Install attribution and ad campaign measurement</td>
-          <td>Install source, device type, OS version, app version, and conversion events (e.g. onboarding completed, subscription started). No health data or free-text content.</td>
-          <td>No</td>
-          <td><a href="https://www.appsflyer.com/legal/privacy-policy/">appsflyer.com/legal/privacy-policy</a></td>
         </tr>
         <tr>
           <td><strong>Sentry</strong></td>
@@ -207,6 +189,13 @@
           <td>Stack traces, device OS/version, app version, session identifier, and standard crash metadata which may include IP address. No health data or free-text content.</td>
           <td>No</td>
           <td><a href="https://sentry.io/privacy/">sentry.io/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>AppsFlyer</strong></td>
+          <td>Install attribution and ad campaign measurement</td>
+          <td>Install source, device type, OS version, app version, and in-app conversion events (e.g. onboarding completed, subscription started). No health data or free-text content.</td>
+          <td>No</td>
+          <td><a href="https://www.appsflyer.com/legal/privacy-policy/">appsflyer.com/legal/privacy-policy</a></td>
         </tr>
       </tbody>
     </table>
