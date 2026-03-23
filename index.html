@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titra — Your GLP-1 Companion</title>
+<meta name="description" content="Track your GLP-1 medication with precision. Serum level estimation, injection site rotation, weight tracking, and more. Free on iOS and Android.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Titra — Your GLP-1 Companion">
+<meta property="og:description" content="Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://titrapp.com">
+<meta property="og:image" content="https://titrapp.com/og-image.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Titra — Your GLP-1 Companion">
+<meta name="twitter:description" content="Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor.">
+
+<link rel="canonical" href="https://titrapp.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fafbfd;--bg2:#f0f4f8;--card:#ffffff;--accent:#0d9488;--accent2:#0891b2;--accent-light:#ccfbf1;--text:#1a2332;--text2:#4a5568;--text3:#94a3b8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);--shadow-lg:0 10px 40px rgba(0,0,0,0.08);--grad:linear-gradient(135deg,#0d9488,#0891b2);--font:'Plus Jakarta Sans',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(20px);background:rgba(250,251,253,0.9);border-bottom:1px solid var(--border)}
+.logo{font-weight:800;font-size:1.5rem;letter-spacing:-0.03em;color:var(--accent);text-decoration:none}
+.nav-r{display:flex;gap:2rem;align-items:center}
+.nav-r a{color:var(--text2);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .3s}
+.nav-r a:hover{color:var(--text)}
+.nav-cta{background:var(--accent)!important;color:#fff!important;padding:.55rem 1.4rem;border-radius:10px;font-weight:700!important;transition:transform .2s,box-shadow .3s!important}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(13,148,136,.3)}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+.hero-chip{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem 1rem;border:1px solid var(--border);border-radius:99px;font-size:.78rem;color:var(--accent);font-weight:600;margin-bottom:2rem;background:var(--accent-light)}
+.hero h1{font-weight:800;font-size:clamp(2.8rem,6vw,4.5rem);line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.25rem;color:var(--text)}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:clamp(1rem,1.8vw,1.2rem);color:var(--text2);max-width:520px;line-height:1.65;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;padding:.85rem 1.75rem;border-radius:12px;font-weight:700;font-size:.92rem;text-decoration:none;transition:transform .2s,box-shadow .3s}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,148,136,.25)}
+.btn-s{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);color:var(--text);padding:.85rem 1.75rem;border-radius:12px;font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--border);transition:border-color .3s,box-shadow .3s}
+.btn-s:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.btn-icon{width:17px;height:17px}
+
+.hero-phones{margin-top:3.5rem;display:flex;gap:1.25rem;justify-content:center;align-items:flex-end}
+.phone{width:190px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border);transition:transform .3s}
+.phone:hover{transform:translateY(-6px)}
+.phone.center{width:220px;box-shadow:0 20px 60px rgba(13,148,136,.15);border-color:var(--accent)}
+.phone img{width:100%;height:auto;display:block}
+
+.trust{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;padding:2.5rem 2rem;background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text2);font-weight:500}
+.trust-check{color:var(--accent);font-weight:700}
+
+.showcase{padding:3rem 0;overflow:hidden;background:var(--bg2)}
+.showcase-track{display:flex;gap:1.25rem;animation:scroll 45s linear infinite;width:max-content}
+.showcase-track:hover{animation-play-state:paused}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.showcase-item{width:260px;flex-shrink:0;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow);transition:transform .3s}
+.showcase-item:hover{transform:scale(1.02)}
+.showcase-item img{width:100%;height:auto;display:block}
+
+section{padding:5rem 2rem;max-width:1060px;margin:0 auto}
+.s-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:700;margin-bottom:.6rem}
+.s-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:.75rem;color:var(--text)}
+.s-sub{color:var(--text2);font-size:1rem;line-height:1.6;max-width:560px}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:3rem}
+.feat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s}
+.feat:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.feat-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.3rem}
+.feat-icon.teal{background:#ccfbf1}.feat-icon.blue{background:#cffafe}.feat-icon.purple{background:#ede9fe}.feat-icon.pink{background:#fce7f3}.feat-icon.amber{background:#fef3c7}.feat-icon.green{background:#d1fae5}.feat-icon.red{background:#fee2e2}.feat-icon.cyan{background:#cffafe}
+.feat h3{font-size:1.05rem;font-weight:700;margin-bottom:.35rem;color:var(--text)}
+.feat p{color:var(--text2);font-size:.88rem;line-height:1.55}
+
+.science-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2rem}
+.science-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.science-graph{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;height:300px;box-shadow:var(--shadow)}
+.science-graph svg{width:100%;height:100%}
+
+.meds{text-align:center;padding:4rem 2rem;border-top:1px solid var(--border)}
+.med-pills{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem;max-width:650px;margin-left:auto;margin-right:auto}
+.med-pill{padding:.5rem 1.1rem;border:1px solid var(--border);border-radius:99px;font-size:.85rem;color:var(--text2);font-weight:500;background:var(--card);transition:border-color .3s,color .3s}
+.med-pill:hover{border-color:var(--accent);color:var(--accent)}
+
+.cta{text-align:center;padding:6rem 2rem;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+.cta h2{font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:.75rem}
+.cta h2 em{font-style:normal;color:var(--accent)}
+.cta p{color:var(--text2);font-size:1.05rem;margin-bottom:2rem}
+
+footer{padding:2.5rem 2rem;border-top:1px solid var(--border);background:var(--card)}
+.footer-inner{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--text3);text-decoration:none;font-size:.8rem;transition:color .3s}
+.footer-links a:hover{color:var(--text2)}
+.footer-copy{color:var(--text3);font-size:.8rem}
+.disclaimer{max-width:1060px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.75rem;color:var(--text3);line-height:1.5;text-align:center}
+
+@media(max-width:768px){
+  nav{padding:.8rem 1.2rem}.nav-r a:not(.nav-cta){display:none}
+  .hero{padding:7rem 1.5rem 3rem}
+  .hero-phones{gap:.6rem}.phone{width:120px;border-radius:14px}.phone.center{width:140px}
+  .science-inner{grid-template-columns:1fr;gap:2rem}
+  .features{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:center}
+  .trust{flex-direction:column;align-items:center;gap:.8rem}
+  .footer-inner{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">titra</a>
+  <div class="nav-r">
+    <a href="#features">Features</a>
+    <a href="#science">Science</a>
+    <a href="#medications">Medications</a>
+    <a href="#download" class="nav-cta">Download Free</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-chip">✓ Built for GLP-1 patients</div>
+  <h1>Your GLP-1<br><em>medication companion</em></h1>
+  <p class="hero-sub">Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor — all in one simple app.</p>
+  <div class="hero-btns">
+    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
+  </div>
+  <div class="hero-phones">
+    <div class="phone"><img src="screenshots/02_side_effects.png" alt="Side effects tracking"></div>
+    <div class="phone center"><img src="screenshots/01_dose_tracking.png" alt="Dose tracking dashboard"></div>
+    <div class="phone"><img src="screenshots/03_progress.png" alt="Progress tracking"></div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-item"><span class="trust-check">✓</span> Private by default</div>
+  <div class="trust-item"><span class="trust-check">✓</span> No ads, ever</div>
+  <div class="trust-item"><span class="trust-check">✓</span> GDPR compliant</div>
+  <div class="trust-item"><span class="trust-check">✓</span> Data stays on your device</div>
+  <div class="trust-item"><span class="trust-check">✓</span> Delete anytime</div>
+</div>
+
+<div class="showcase">
+  <div class="showcase-track">
+    <div class="showcase-item"><img src="screenshots/01_dose_tracking.png" alt="Dose tracking" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/02_side_effects.png" alt="Side effects" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/03_progress.png" alt="Progress" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/04_titra_plus.png" alt="titra+" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/05_security.png" alt="Security" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/01_dose_tracking.png" alt="Dose tracking" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/02_side_effects.png" alt="Side effects" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/03_progress.png" alt="Progress" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/04_titra_plus.png" alt="titra+" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/05_security.png" alt="Security" loading="lazy"></div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="s-label">Features</div>
+  <div class="s-title">Designed around your<br>medication journey</div>
+  <p class="s-sub">Every feature built with input from real GLP-1 patients and informed by published clinical data.</p>
+  <div class="features">
+    <div class="feat"><div class="feat-icon teal">💉</div><h3>Smart Dose Logging</h3><p>Log injections or pills in seconds. Track medication, dose, time, and notes. Full history at a glance.</p></div>
+    <div class="feat"><div class="feat-icon blue">📊</div><h3>Serum Level Estimator</h3><p>Estimated blood concentration using pharmacokinetic modelling. Based on half-life decay from your last dose.</p></div>
+    <div class="feat"><div class="feat-icon purple">🗺️</div><h3>Injection Site Rotation</h3><p>Visual body map with 14 sites. Smart warnings prevent injecting too close to your navel.</p></div>
+    <div class="feat"><div class="feat-icon pink">⚖️</div><h3>Weight &amp; Progress</h3><p>Chart weight alongside medication data. See correlations between doses and progress.</p></div>
+    <div class="feat"><div class="feat-icon red">🤒</div><h3>Side Effects with Context</h3><p>Log symptoms with clinical trial data and self-care tips from prescribing information.</p></div>
+    <div class="feat"><div class="feat-icon amber">🍔</div><h3>Food Noise Tracker</h3><p>Rate cravings 0–10 daily. Track appetite changes over time on your medication.</p></div>
+    <div class="feat"><div class="feat-icon cyan">🏥</div><h3>Health Connect Sync</h3><p>Apple Health and Google Health Connect. Steps, calories, nutrition — all in one place.</p></div>
+    <div class="feat"><div class="feat-icon green">📋</div><h3>Doctor Reports</h3><p>Generate branded PDF summaries. Dose timeline, weight trajectory, side effect patterns.</p></div>
+  </div>
+</section>
+
+<div class="science-section" id="science">
+  <div class="science-inner">
+    <div>
+      <div class="s-label">The Science</div>
+      <div class="s-title">Understand what’s happening inside your body</div>
+      <p class="s-sub" style="margin-top:.75rem">Our Serum Level Estimator uses published pharmacokinetic data — half-lives, bioavailability, and absorption rates — to model your medication concentration over time.</p>
+      <p class="s-sub" style="margin-top:.75rem">Based on the same data your doctor references, presented in a way you can actually understand.</p>
+      <p style="color:var(--text3);font-size:.75rem;margin-top:1.25rem;font-style:italic">For informational purposes only. Titra does not provide medical advice. Always consult your healthcare provider.</p>
+    </div>
+    <div class="science-graph">
+      <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="cg" x1="0" y1="0" x2="400" y2="0"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#0891b2"/></linearGradient><linearGradient id="fg" x1="0" y1="0" x2="0" y2="240"><stop offset="0%" stop-color="#0d9488" stop-opacity="0.15"/><stop offset="100%" stop-color="#0d9488" stop-opacity="0"/></linearGradient></defs>
+        <line x1="0" y1="60" x2="400" y2="60" stroke="#e2e8f0"/><line x1="0" y1="120" x2="400" y2="120" stroke="#e2e8f0"/><line x1="0" y1="180" x2="400" y2="180" stroke="#e2e8f0"/>
+        <text x="8" y="55" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Peak</text>
+        <text x="8" y="115" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Therapeutic</text>
+        <text x="8" y="175" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Trough</text>
+        <text x="340" y="235" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">7 days →</text>
+        <path d="M0,200 C20,190 40,60 80,50 C120,40 140,70 160,90 C180,110 200,130 220,140 C260,155 300,165 340,172 C370,178 390,182 400,185" stroke="url(#cg)" stroke-width="2.5" fill="none"><animate attributeName="stroke-dasharray" from="0 1000" to="1000 0" dur="2s" fill="freeze"/></path>
+        <path d="M0,200 C20,190 40,60 80,50 C120,40 140,70 160,90 C180,110 200,130 220,140 C260,155 300,165 340,172 C370,178 390,182 400,185 L400,240 L0,240 Z" fill="url(#fg)" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="2s" begin="0.5s" fill="freeze"/></path>
+        <circle cx="80" cy="50" r="5" fill="#0d9488" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/></circle>
+        <text x="66" y="38" fill="#0d9488" font-size="10" font-family="Plus Jakarta Sans" font-weight="600" opacity="0">Dose<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/></text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="meds" id="medications">
+  <div class="s-label">Supported Medications</div>
+  <div class="s-title">Works with all GLP-1 medications</div>
+  <p class="s-sub" style="margin:0 auto">Injections and oral formulations with accurate pharmacokinetic data.</p>
+  <div class="med-pills">
+    <span class="med-pill">Ozempic</span><span class="med-pill">Wegovy</span><span class="med-pill">Mounjaro</span><span class="med-pill">Zepbound</span><span class="med-pill">Rybelsus</span><span class="med-pill">Wegovy Pill</span><span class="med-pill">Semaglutide (Generic)</span><span class="med-pill">Orforglipron</span>
+  </div>
+</div>
+
+<section class="cta" id="download">
+  <h2>Start tracking your<br><em>medication journey</em></h2>
+  <p>Free to download. Premium features available with titra+.</p>
+  <div class="hero-btns">
+    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
+  </div>
+</section>
+
+<footer>
+  <div class="disclaimer">Titra is a wellness and tracking application. It does not provide medical advice, diagnosis, or treatment. The Serum Level Estimator provides estimates for informational purposes only. Always consult your healthcare provider regarding your medication.</div>
+  <div class="footer-inner" style="margin-top:1.5rem">
+    <a href="#" class="logo" style="font-size:1.1rem">titra</a>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms-of-service.html">Terms of Service</a>
+      <a href="mailto:info@titrapp.com">Support</a>
+      <a href="mailto:info@titrapp.com">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Titra. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const o=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1});
+  document.querySelectorAll('.feat,.science-inner>div,.med-pills').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(24px)';el.style.transition='opacity .5s ease,transform .5s ease';o.observe(el)});
+});
+</script>
+</body>
+</html>
