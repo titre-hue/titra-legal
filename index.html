@@ -1,280 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Titra — Your GLP-1 Companion</title>
-<meta name="description" content="Track your GLP-1 medication with precision. Serum level estimation, injection site rotation, weight tracking, and more. Free on iOS and Android.">
+<title>Titra — GLP-1 Medication Tracker for Ozempic, Wegovy, Mounjaro &amp; More</title>
+<meta name="description" content="Titra is a free GLP-1 medication tracking app. Track Ozempic, Wegovy, Mounjaro, and Zepbound doses, visualize serum levels with pharmacokinetic modeling, rotate injection sites, log side effects, and generate doctor reports. Available on iOS and Android.">
+<meta name="keywords" content="GLP-1 tracker, Ozempic tracker, Wegovy tracker, Mounjaro tracker, Zepbound tracker, semaglutide tracker, tirzepatide tracker, medication tracker app, injection site rotation, serum level estimator, GLP-1 medication app, weight loss medication tracker">
+<meta name="author" content="Titra">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Titra — Your GLP-1 Companion">
-<meta property="og:description" content="Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor.">
+<meta property="og:title" content="Titra — GLP-1 Medication Tracker App">
+<meta property="og:description" content="Track GLP-1 doses, visualize serum levels, rotate injection sites, log side effects, and share reports with your doctor. Free on iOS and Android.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://titrapp.com">
 <meta property="og:image" content="https://titrapp.com/og-image.png">
+<meta property="og:site_name" content="Titra">
+<meta property="og:locale" content="en_US">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Titra — Your GLP-1 Companion">
-<meta name="twitter:description" content="Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor.">
+<meta name="twitter:title" content="Titra — GLP-1 Medication Tracker App">
+<meta name="twitter:description" content="Track GLP-1 doses, visualize serum levels, rotate injection sites, log side effects, and share reports with your doctor.">
 
 <link rel="canonical" href="https://titrapp.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#fafbfd;--bg2:#f0f4f8;--card:#ffffff;--accent:#0d9488;--accent2:#0891b2;--accent-light:#ccfbf1;--text:#1a2332;--text2:#4a5568;--text3:#94a3b8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);--shadow-lg:0 10px 40px rgba(0,0,0,0.08);--grad:linear-gradient(135deg,#0d9488,#0891b2);--font:'Plus Jakarta Sans',system-ui,sans-serif}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(20px);background:rgba(250,251,253,0.9);border-bottom:1px solid var(--border)}
-.logo{font-weight:800;font-size:1.5rem;letter-spacing:-0.03em;color:var(--accent);text-decoration:none}
-.nav-r{display:flex;gap:2rem;align-items:center}
-.nav-r a{color:var(--text2);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .3s}
-.nav-r a:hover{color:var(--text)}
-.nav-cta{background:var(--accent)!important;color:#fff!important;padding:.55rem 1.4rem;border-radius:10px;font-weight:700!important;transition:transform .2s,box-shadow .3s!important}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(13,148,136,.3)}
-
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
-.hero-chip{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem 1rem;border:1px solid var(--border);border-radius:99px;font-size:.78rem;color:var(--accent);font-weight:600;margin-bottom:2rem;background:var(--accent-light)}
-.hero h1{font-weight:800;font-size:clamp(2.8rem,6vw,4.5rem);line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.25rem;color:var(--text)}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{font-size:clamp(1rem,1.8vw,1.2rem);color:var(--text2);max-width:520px;line-height:1.65;margin-bottom:2.5rem}
-.hero-btns{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
-.btn-p{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;padding:.85rem 1.75rem;border-radius:12px;font-weight:700;font-size:.92rem;text-decoration:none;transition:transform .2s,box-shadow .3s}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,148,136,.25)}
-.btn-s{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);color:var(--text);padding:.85rem 1.75rem;border-radius:12px;font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--border);transition:border-color .3s,box-shadow .3s}
-.btn-s:hover{border-color:var(--accent);box-shadow:var(--shadow)}
-.btn-icon{width:17px;height:17px}
-
-.hero-phones{margin-top:3.5rem;display:flex;gap:1.25rem;justify-content:center;align-items:flex-end}
-.phone{width:190px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border);transition:transform .3s}
-.phone:hover{transform:translateY(-6px)}
-.phone.center{width:220px;box-shadow:0 20px 60px rgba(13,148,136,.15);border-color:var(--accent)}
-.phone img{width:100%;height:auto;display:block}
-
-.trust{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;padding:2.5rem 2rem;background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.trust-item{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text2);font-weight:500}
-.trust-check{color:var(--accent);font-weight:700}
-
-.showcase{padding:3rem 0;overflow:hidden;background:var(--bg2)}
-.showcase-track{display:flex;gap:1.25rem;animation:scroll 45s linear infinite;width:max-content}
-.showcase-track:hover{animation-play-state:paused}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.showcase-item{width:260px;flex-shrink:0;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow);transition:transform .3s}
-.showcase-item:hover{transform:scale(1.02)}
-.showcase-item img{width:100%;height:auto;display:block}
-
-section{padding:5rem 2rem;max-width:1060px;margin:0 auto}
-.s-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:700;margin-bottom:.6rem}
-.s-title{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:.75rem;color:var(--text)}
-.s-sub{color:var(--text2);font-size:1rem;line-height:1.6;max-width:560px}
-
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:3rem}
-.feat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s}
-.feat:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.feat-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.3rem}
-.feat-icon.teal{background:#ccfbf1}.feat-icon.blue{background:#cffafe}.feat-icon.purple{background:#ede9fe}.feat-icon.pink{background:#fce7f3}.feat-icon.amber{background:#fef3c7}.feat-icon.green{background:#d1fae5}.feat-icon.red{background:#fee2e2}.feat-icon.cyan{background:#cffafe}
-.feat h3{font-size:1.05rem;font-weight:700;margin-bottom:.35rem;color:var(--text)}
-.feat p{color:var(--text2);font-size:.88rem;line-height:1.55}
-
-.science-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2rem}
-.science-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
-.science-graph{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;height:300px;box-shadow:var(--shadow)}
-.science-graph svg{width:100%;height:100%}
-
-.meds{text-align:center;padding:4rem 2rem;border-top:1px solid var(--border)}
-.med-pills{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem;max-width:650px;margin-left:auto;margin-right:auto}
-.med-pill{padding:.5rem 1.1rem;border:1px solid var(--border);border-radius:99px;font-size:.85rem;color:var(--text2);font-weight:500;background:var(--card);transition:border-color .3s,color .3s}
-.med-pill:hover{border-color:var(--accent);color:var(--accent)}
-
-.cta{text-align:center;padding:6rem 2rem;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
-.cta h2{font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:.75rem}
-.cta h2 em{font-style:normal;color:var(--accent)}
-.cta p{color:var(--text2);font-size:1.05rem;margin-bottom:2rem}
-
-footer{padding:2.5rem 2rem;border-top:1px solid var(--border);background:var(--card)}
-.footer-inner{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-links{display:flex;gap:1.5rem}
-.footer-links a{color:var(--text3);text-decoration:none;font-size:.8rem;transition:color .3s}
-.footer-links a:hover{color:var(--text2)}
-.footer-copy{color:var(--text3);font-size:.8rem}
-.disclaimer{max-width:1060px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.75rem;color:var(--text3);line-height:1.5;text-align:center}
-
-@media(max-width:768px){
-  nav{padding:.8rem 1.2rem}.nav-r a:not(.nav-cta){display:none}
-  .hero{padding:7rem 1.5rem 3rem}
-  .hero-phones{gap:.6rem}.phone{width:120px;border-radius:14px}.phone.center{width:140px}
-  .science-inner{grid-template-columns:1fr;gap:2rem}
-  .features{grid-template-columns:1fr}
-  .hero-btns{flex-direction:column;align-items:center}
-  .trust{flex-direction:column;align-items:center;gap:.8rem}
-  .footer-inner{flex-direction:column;text-align:center}
+<!-- JSON-LD: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Titra",
+  "alternateName": "Titra GLP-1 Companion",
+  "description": "Titra is a GLP-1 medication tracking app that helps patients track doses of Ozempic, Wegovy, Mounjaro, Zepbound, Rybelsus, and other GLP-1 receptor agonists. Features include serum level estimation using pharmacokinetic modeling, injection site rotation with a visual body map, side effect logging with clinical trial context, food noise tracking, weight charting, Apple Health and Google Health Connect integration, and PDF doctor reports.",
+  "url": "https://titrapp.com",
+  "applicationCategory": "HealthApplication",
+  "applicationSubCategory": "MedicationTracker",
+  "operatingSystem": "iOS, Android",
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free to download with optional titra+ premium subscription"
+    }
+  ],
+  "downloadUrl": [
+    "https://apps.apple.com/app/titra-glp-1-companion/id6742448663",
+    "https://play.google.com/store/apps/details?id=com.titra.app"
+  ],
+  "screenshot": [
+    "https://titrapp.com/screenshots/01_dashboard.png",
+    "https://titrapp.com/screenshots/02_injection_sites.png",
+    "https://titrapp.com/screenshots/03_side_effects.png",
+    "https://titrapp.com/screenshots/04_food_noise.png",
+    "https://titrapp.com/screenshots/05_health_sync.png",
+    "https://titrapp.com/screenshots/06_reports.png",
+    "https://titrapp.com/screenshots/07_reminders.png",
+    "https://titrapp.com/screenshots/08_medications.png"
+  ],
+  "featureList": [
+    "GLP-1 dose tracking for injections and oral medications",
+    "Serum level estimation using pharmacokinetic half-life decay modeling",
+    "Injection site rotation with 14-zone visual body map",
+    "Side effect logging with clinical trial prevalence data",
+    "Food noise and appetite craving tracker (0-10 scale)",
+    "Weight and progress charting with medication correlation",
+    "Apple Health and Google Health Connect integration",
+    "PDF doctor reports with dose timeline and weight trajectory",
+    "Medication reminders and dose scheduling",
+    "Privacy-first design with on-device data storage"
+  ],
+  "softwareVersion": "1.4.0",
+  "datePublished": "2025-12-01",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "provider": {
+    "@type": "Organization",
+    "name": "Titra",
+    "url": "https://titrapp.com",
+    "email": "info@titrapp.com"
+  }
 }
-</style>
-</head>
-<body>
-
-<nav>
-  <a href="#" class="logo">titra</a>
-  <div class="nav-r">
-    <a href="#features">Features</a>
-    <a href="#science">Science</a>
-    <a href="#medications">Medications</a>
-    <a href="#download" class="nav-cta">Download Free</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-chip">✓ Built for GLP-1 patients</div>
-  <h1>Your GLP-1<br><em>medication companion</em></h1>
-  <p class="hero-sub">Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor — all in one simple app.</p>
-  <div class="hero-btns">
-    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
-  </div>
-  <div class="hero-phones">
-    <div class="phone"><img src="screenshots/05_health_sync.png" alt="Health sync"></div>
-    <div class="phone center"><img src="screenshots/01_dashboard.png" alt="Dashboard"></div>
-    <div class="phone"><img src="screenshots/02_injection_sites.png" alt="Injection sites"></div>
-  </div>
-</section>
-
-<div class="trust">
-  <div class="trust-item"><span class="trust-check">✓</span> Private by default</div>
-  <div class="trust-item"><span class="trust-check">✓</span> No ads, ever</div>
-  <div class="trust-item"><span class="trust-check">✓</span> GDPR compliant</div>
-  <div class="trust-item"><span class="trust-check">✓</span> Data stays on your device</div>
-  <div class="trust-item"><span class="trust-check">✓</span> Delete anytime</div>
-</div>
-
-<div class="showcase">
-  <div class="showcase-track">
-    <div class="showcase-item"><img src="screenshots/01_dashboard.png" alt="Dashboard" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/02_injection_sites.png" alt="Injection sites" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/03_side_effects.png" alt="Side effects" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/04_food_noise.png" alt="Food noise" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/05_health_sync.png" alt="Health sync" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/06_reports.png" alt="Reports" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/07_reminders.png" alt="Reminders" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/08_medications.png" alt="Medications" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/01_dashboard.png" alt="Dashboard" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/02_injection_sites.png" alt="Injection sites" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/03_side_effects.png" alt="Side effects" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/04_food_noise.png" alt="Food noise" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/05_health_sync.png" alt="Health sync" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/06_reports.png" alt="Reports" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/07_reminders.png" alt="Reminders" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/08_medications.png" alt="Medications" loading="lazy"></div>
-  </div>
-</div>
-
-<section id="features">
-  <div class="s-label">Features</div>
-  <div class="s-title">Designed around your<br>medication journey</div>
-  <p class="s-sub">Every feature built with input from real GLP-1 patients and informed by published clinical data.</p>
-  <div class="features">
-    <div class="feat"><div class="feat-icon teal">💉</div><h3>Smart Dose Logging</h3><p>Log injections or pills in seconds. Track medication, dose, time, and notes. Full history at a glance.</p></div>
-    <div class="feat"><div class="feat-icon blue">📊</div><h3>Serum Level Estimator</h3><p>Estimated blood concentration using pharmacokinetic modelling. Based on half-life decay from your last dose.</p></div>
-    <div class="feat"><div class="feat-icon purple">🗺️</div><h3>Injection Site Rotation</h3><p>Visual body map with 14 sites. Smart warnings prevent injecting too close to your navel.</p></div>
-    <div class="feat"><div class="feat-icon pink">⚖️</div><h3>Weight &amp; Progress</h3><p>Chart weight alongside medication data. See correlations between doses and progress.</p></div>
-    <div class="feat"><div class="feat-icon red">🤒</div><h3>Side Effects with Context</h3><p>Log symptoms with clinical trial data and self-care tips from prescribing information.</p></div>
-    <div class="feat"><div class="feat-icon amber">🍔</div><h3>Food Noise Tracker</h3><p>Rate cravings 0–10 daily. Track appetite changes over time on your medication.</p></div>
-    <div class="feat"><div class="feat-icon cyan">🏥</div><h3>Health Connect Sync</h3><p>Apple Health and Google Health Connect. Steps, calories, nutrition — all in one place.</p></div>
-    <div class="feat"><div class="feat-icon green">📋</div><h3>Doctor Reports</h3><p>Generate branded PDF summaries. Dose timeline, weight trajectory, side effect patterns.</p></div>
-  </div>
-</section>
-
-<div class="science-section" id="science">
-  <div class="science-inner">
-    <div>
-      <div class="s-label">The Science</div>
-      <div class="s-title">Understand what’s happening inside your body</div>
-      <p class="s-sub" style="margin-top:.75rem">Our Serum Level Estimator uses published pharmacokinetic data — half-lives, bioavailability, and absorption rates — to model your medication concentration over time.</p>
-      <p class="s-sub" style="margin-top:.75rem">Based on the same data your doctor references, presented in a way you can actually understand.</p>
-      <p style="color:var(--text3);font-size:.75rem;margin-top:1.25rem;font-style:italic">For informational purposes only. Titra does not provide medical advice. Always consult your healthcare provider.</p>
-    </div>
-    <div class="science-graph">
-      <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="cg" x1="0" y1="0" x2="400" y2="0"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#0891b2"/></linearGradient><linearGradient id="fg" x1="0" y1="0" x2="0" y2="240"><stop offset="0%" stop-color="#0d9488" stop-opacity="0.15"/><stop offset="100%" stop-color="#0d9488" stop-opacity="0"/></linearGradient></defs>
-        <line x1="0" y1="60" x2="400" y2="60" stroke="#e2e8f0"/><line x1="0" y1="120" x2="400" y2="120" stroke="#e2e8f0"/><line x1="0" y1="180" x2="400" y2="180" stroke="#e2e8f0"/>
-        <text x="8" y="55" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Peak</text>
-        <text x="8" y="115" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Therapeutic</text>
-        <text x="8" y="175" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Trough</text>
-        <text x="340" y="235" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">7 days →</text>
-        <path d="M0,200 C20,190 40,60 80,50 C120,40 140,70 160,90 C180,110 200,130 220,140 C260,155 300,165 340,172 C370,178 390,182 400,185" stroke="url(#cg)" stroke-width="2.5" fill="none"><animate attributeName="stroke-dasharray" from="0 1000" to="1000 0" dur="2s" fill="freeze"/></path>
-        <path d="M0,200 C20,190 40,60 80,50 C120,40 140,70 160,90 C180,110 200,130 220,140 C260,155 300,165 340,172 C370,178 390,182 400,185 L400,240 L0,240 Z" fill="url(#fg)" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="2s" begin="0.5s" fill="freeze"/></path>
-        <circle cx="80" cy="50" r="5" fill="#0d9488" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/></circle>
-        <text x="66" y="38" fill="#0d9488" font-size="10" font-family="Plus Jakarta Sans" font-weight="600" opacity="0">Dose<animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/></text>
-      </svg>
-    </div>
-  </div>
-</div>
-
-<div class="meds" id="medications">
-  <div class="s-label">Supported Medications</div>
-  <div class="s-title">Works with all GLP-1 medications</div>
-  <p class="s-sub" style="margin:0 auto">Injections and oral formulations with accurate pharmacokinetic data.</p>
-  <div class="med-pills">
-    <span class="med-pill">Ozempic</span><span class="med-pill">Wegovy</span><span class="med-pill">Mounjaro</span><span class="med-pill">Zepbound</span><span class="med-pill">Rybelsus</span><span class="med-pill">Wegovy Pill</span><span class="med-pill">Semaglutide (Generic)</span><span class="med-pill">Orforglipron</span>
-  </div>
-</div>
-
-<section class="cta" id="download">
-  <h2>Start tracking your<br><em>medication journey</em></h2>
-  <p>Free to download. Premium features available with titra+.</p>
-  <div class="hero-btns">
-    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
-  </div>
-</section>
-
-<footer>
-  <div class="disclaimer">Titra is a wellness and tracking application. It does not provide medical advice, diagnosis, or treatment. The Serum Level Estimator provides estimates for informational purposes only. Always consult your healthcare provider regarding your medication.</div>
-  <div class="footer-inner" style="margin-top:1.5rem">
-    <a href="#" class="logo" style="font-size:1.1rem">titra</a>
-    <div class="footer-links">
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/terms-of-service.html">Terms of Service</a>
-      <a href="mailto:info@titrapp.com">Support</a>
-      <a href="mailto:info@titrapp.com">Contact</a>
-    </div>
-    <div class="footer-copy">© 2026 Titra. All rights reserved.</div>
-  </div>
-</footer>
-
-<script>
-document.addEventListener('DOMContentLoaded',()=>{
-  const o=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1});
-  document.querySelectorAll('.feat,.science-inner>div,.med-pills').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(24px)';el.style.transition='opacity .5s ease,transform .5s ease';o.observe(el)});
-});
 </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Titra — Your GLP-1 Companion</title>
-<meta name="description" content="Track your GLP-1 medication with precision. Serum level estimation, injection site rotation, weight tracking, and more. Free on iOS and Android.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Titra — Your GLP-1 Companion">
-<meta property="og:description" content="Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://titrapp.com">
-<meta property="og:image" content="https://titrapp.com/og-image.png">
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Titra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Titra is a free mobile app for iOS and Android that helps patients track GLP-1 receptor agonist medications like Ozempic (semaglutide), Wegovy, Mounjaro (tirzepatide), Zepbound, and Rybelsus. It provides serum level estimation, injection site rotation, side effect tracking, weight monitoring, and generates PDF reports to share with your doctor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Titra serum level estimator work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Titra's Serum Level Estimator uses published pharmacokinetic data including medication half-lives, bioavailability, and absorption rates to model your estimated blood concentration over time. For example, semaglutide has a half-life of approximately 7 days. The estimator calculates decay from your last logged dose to show where your medication level likely is at any point. This is for informational purposes only and is not medical advice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which GLP-1 medications does Titra support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Titra supports all major GLP-1 receptor agonist medications including Ozempic (semaglutide injection), Wegovy (semaglutide injection for weight management), Mounjaro (tirzepatide), Zepbound (tirzepatide for weight management), Rybelsus (oral semaglutide), Wegovy Pill (oral semaglutide for weight management), generic semaglutide, and orforglipron. Each medication has accurate pharmacokinetic data for serum level estimation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Titra free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Titra is free to download and use. Core features including dose tracking, injection site rotation, weight logging, and side effect tracking are completely free. An optional titra+ premium subscription unlocks additional features like the Serum Level Estimator, advanced reports, and health data sync."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my health data private in Titra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Titra is private by default. All health data is stored locally on your device. Titra does not sell or share your data, contains no ads, and is GDPR compliant. You can delete all your data at any time from within the app. Optional cloud sync uses end-to-end encryption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is injection site rotation and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Injection site rotation means alternating where you inject your GLP-1 medication to prevent lipodystrophy (tissue changes under the skin that can affect medication absorption). Titra provides a visual body map with 14 injection zones and smart warnings to help you avoid injecting in the same area too frequently or too close to your navel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is food noise and how does Titra track it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Food noise refers to persistent, intrusive thoughts about food and eating. Many GLP-1 medication users report a significant reduction in food noise as a benefit of treatment. Titra lets you rate your food noise on a 0-10 scale daily, then charts the trend over time so you can see how your appetite and cravings change with your medication."
+      }
+    }
+  ]
+}
+</script>
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Titra — Your GLP-1 Companion">
-<meta name="twitter:description" content="Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor.">
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Titra",
+  "url": "https://titrapp.com",
+  "email": "info@titrapp.com",
+  "description": "Titra builds medication tracking tools for GLP-1 patients.",
+  "sameAs": [
+    "https://apps.apple.com/app/titra-glp-1-companion/id6742448663",
+    "https://play.google.com/store/apps/details?id=com.titra.app"
+  ]
+}
+</script>
 
-<link rel="canonical" href="https://titrapp.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- JSON-LD: WebSite (for sitelinks search) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Titra",
+  "url": "https://titrapp.com",
+  "description": "GLP-1 medication tracking app for Ozempic, Wegovy, Mounjaro, Zepbound and more."
+}
+</script>
+
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#fafbfd;--bg2:#f0f4f8;--card:#ffffff;--accent:#0d9488;--accent2:#0891b2;--accent-light:#ccfbf1;--text:#1a2332;--text2:#4a5568;--text3:#94a3b8;--border:#e2e8f0;--shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);--shadow-lg:0 10px 40px rgba(0,0,0,0.08);--grad:linear-gradient(135deg,#0d9488,#0891b2);--font:'Plus Jakarta Sans',system-ui,sans-serif}
@@ -311,6 +216,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:fl
 .trust-item{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--text2);font-weight:500}
 .trust-check{color:var(--accent);font-weight:700}
 
+/* SHOWCASE */
 .showcase{padding:3rem 0;overflow:hidden;background:var(--bg2)}
 .showcase-track{display:flex;gap:1.25rem;animation:scroll 45s linear infinite;width:max-content}
 .showcase-track:hover{animation-play-state:paused}
@@ -342,6 +248,16 @@ section{padding:5rem 2rem;max-width:1060px;margin:0 auto}
 .med-pill{padding:.5rem 1.1rem;border:1px solid var(--border);border-radius:99px;font-size:.85rem;color:var(--text2);font-weight:500;background:var(--card);transition:border-color .3s,color .3s}
 .med-pill:hover{border-color:var(--accent);color:var(--accent)}
 
+/* FAQ */
+.faq-section{padding:5rem 2rem;max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:1.5rem 0}
+.faq-item:first-of-type{border-top:1px solid var(--border)}
+.faq-q{font-size:1.05rem;font-weight:700;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-q::after{content:'+';font-size:1.4rem;color:var(--accent);font-weight:400;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{color:var(--text2);font-size:.92rem;line-height:1.65;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;padding-top:0}
+.faq-item.open .faq-a{max-height:500px;padding-top:1rem}
+
 .cta{text-align:center;padding:6rem 2rem;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
 .cta h2{font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:.75rem}
 .cta h2 em{font-style:normal;color:var(--accent)}
@@ -369,67 +285,76 @@ footer{padding:2.5rem 2rem;border-top:1px solid var(--border);background:var(--c
 </head>
 <body>
 
-<nav>
+<nav role="navigation" aria-label="Main navigation">
   <a href="#" class="logo">titra</a>
   <div class="nav-r">
     <a href="#features">Features</a>
     <a href="#science">Science</a>
     <a href="#medications">Medications</a>
+    <a href="#faq">FAQ</a>
     <a href="#download" class="nav-cta">Download Free</a>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-chip">✓ Built for GLP-1 patients</div>
+<main>
+<header class="hero">
+  <div class="hero-chip">&#10003; Built for GLP-1 patients</div>
   <h1>Your GLP-1<br><em>medication companion</em></h1>
-  <p class="hero-sub">Track doses, visualise serum levels, rotate injection sites, log side effects, and share reports with your doctor — all in one simple app.</p>
+  <p class="hero-sub">Titra is a free app that helps you track GLP-1 medication doses, visualize estimated serum levels, rotate injection sites, log side effects, and share reports with your doctor &mdash; all in one place.</p>
   <div class="hero-btns">
-    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
+    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p" aria-label="Download Titra on the App Store"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s" aria-label="Download Titra on Google Play"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
   </div>
   <div class="hero-phones">
-    <div class="phone"><img src="screenshots/02_side_effects.png" alt="Side effects tracking"></div>
-    <div class="phone center"><img src="screenshots/01_dose_tracking.png" alt="Dose tracking dashboard"></div>
-    <div class="phone"><img src="screenshots/03_progress.png" alt="Progress tracking"></div>
+    <div class="phone"><img src="screenshots/03_side_effects.png" alt="Titra side effects tracking screen showing symptom logging with clinical trial prevalence data" width="380" height="822"></div>
+    <div class="phone center"><img src="screenshots/01_dashboard.png" alt="Titra dashboard showing GLP-1 dose tracking, serum level estimation, and weight progress" width="440" height="952"></div>
+    <div class="phone"><img src="screenshots/06_reports.png" alt="Titra doctor report generation screen showing PDF summary of medication history" width="380" height="822"></div>
   </div>
-</section>
+</header>
 
-<div class="trust">
-  <div class="trust-item"><span class="trust-check">✓</span> Private by default</div>
-  <div class="trust-item"><span class="trust-check">✓</span> No ads, ever</div>
-  <div class="trust-item"><span class="trust-check">✓</span> GDPR compliant</div>
-  <div class="trust-item"><span class="trust-check">✓</span> Data stays on your device</div>
-  <div class="trust-item"><span class="trust-check">✓</span> Delete anytime</div>
+<div class="trust" role="list" aria-label="Trust signals">
+  <div class="trust-item" role="listitem"><span class="trust-check">&#10003;</span> Private by default</div>
+  <div class="trust-item" role="listitem"><span class="trust-check">&#10003;</span> No ads, ever</div>
+  <div class="trust-item" role="listitem"><span class="trust-check">&#10003;</span> GDPR compliant</div>
+  <div class="trust-item" role="listitem"><span class="trust-check">&#10003;</span> Data stays on your device</div>
+  <div class="trust-item" role="listitem"><span class="trust-check">&#10003;</span> Delete anytime</div>
 </div>
 
-<div class="showcase">
+<div class="showcase" aria-label="App screenshots carousel">
   <div class="showcase-track">
-    <div class="showcase-item"><img src="screenshots/01_dose_tracking.png" alt="Dose tracking" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/02_side_effects.png" alt="Side effects" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/03_progress.png" alt="Progress" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/04_titra_plus.png" alt="titra+" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/05_security.png" alt="Security" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/01_dose_tracking.png" alt="Dose tracking" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/02_side_effects.png" alt="Side effects" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/03_progress.png" alt="Progress" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/04_titra_plus.png" alt="titra+" loading="lazy"></div>
-    <div class="showcase-item"><img src="screenshots/05_security.png" alt="Security" loading="lazy"></div>
+    <div class="showcase-item"><img src="screenshots/01_dashboard.png" alt="Titra GLP-1 dashboard" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/02_injection_sites.png" alt="Injection site rotation body map" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/03_side_effects.png" alt="Side effects tracking with clinical data" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/04_food_noise.png" alt="Food noise and appetite craving tracker" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/05_health_sync.png" alt="Apple Health and Google Health Connect sync" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/06_reports.png" alt="PDF doctor report generation" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/07_reminders.png" alt="Medication dose reminders" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/08_medications.png" alt="Supported GLP-1 medications list" loading="lazy" width="520" height="1126"></div>
+    <!-- Duplicate set for infinite scroll -->
+    <div class="showcase-item"><img src="screenshots/01_dashboard.png" alt="Titra GLP-1 dashboard" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/02_injection_sites.png" alt="Injection site rotation body map" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/03_side_effects.png" alt="Side effects tracking with clinical data" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/04_food_noise.png" alt="Food noise and appetite craving tracker" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/05_health_sync.png" alt="Apple Health and Google Health Connect sync" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/06_reports.png" alt="PDF doctor report generation" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/07_reminders.png" alt="Medication dose reminders" loading="lazy" width="520" height="1126"></div>
+    <div class="showcase-item"><img src="screenshots/08_medications.png" alt="Supported GLP-1 medications list" loading="lazy" width="520" height="1126"></div>
   </div>
 </div>
 
 <section id="features">
   <div class="s-label">Features</div>
-  <div class="s-title">Designed around your<br>medication journey</div>
-  <p class="s-sub">Every feature built with input from real GLP-1 patients and informed by published clinical data.</p>
+  <h2 class="s-title">Designed around your<br>GLP-1 medication journey</h2>
+  <p class="s-sub">Every feature in Titra was built with input from real GLP-1 patients and informed by published clinical pharmacokinetic data.</p>
   <div class="features">
-    <div class="feat"><div class="feat-icon teal">💉</div><h3>Smart Dose Logging</h3><p>Log injections or pills in seconds. Track medication, dose, time, and notes. Full history at a glance.</p></div>
-    <div class="feat"><div class="feat-icon blue">📊</div><h3>Serum Level Estimator</h3><p>Estimated blood concentration using pharmacokinetic modelling. Based on half-life decay from your last dose.</p></div>
-    <div class="feat"><div class="feat-icon purple">🗺️</div><h3>Injection Site Rotation</h3><p>Visual body map with 14 sites. Smart warnings prevent injecting too close to your navel.</p></div>
-    <div class="feat"><div class="feat-icon pink">⚖️</div><h3>Weight &amp; Progress</h3><p>Chart weight alongside medication data. See correlations between doses and progress.</p></div>
-    <div class="feat"><div class="feat-icon red">🤒</div><h3>Side Effects with Context</h3><p>Log symptoms with clinical trial data and self-care tips from prescribing information.</p></div>
-    <div class="feat"><div class="feat-icon amber">🍔</div><h3>Food Noise Tracker</h3><p>Rate cravings 0–10 daily. Track appetite changes over time on your medication.</p></div>
-    <div class="feat"><div class="feat-icon cyan">🏥</div><h3>Health Connect Sync</h3><p>Apple Health and Google Health Connect. Steps, calories, nutrition — all in one place.</p></div>
-    <div class="feat"><div class="feat-icon green">📋</div><h3>Doctor Reports</h3><p>Generate branded PDF summaries. Dose timeline, weight trajectory, side effect patterns.</p></div>
+    <article class="feat"><div class="feat-icon teal">&#128137;</div><h3>Smart Dose Logging</h3><p>Log GLP-1 injections or oral medications in seconds. Track the medication name, dose amount, injection time, and add notes. Full dose history at a glance.</p></article>
+    <article class="feat"><div class="feat-icon blue">&#128202;</div><h3>Serum Level Estimator</h3><p>See your estimated blood concentration using pharmacokinetic modeling. Titra calculates half-life decay from your last dose to show where your medication level likely is right now.</p></article>
+    <article class="feat"><div class="feat-icon purple">&#128506;</div><h3>Injection Site Rotation</h3><p>Visual body map with 14 injection zones. Smart warnings prevent you from injecting too close to your navel or reusing the same site too soon, helping prevent lipodystrophy.</p></article>
+    <article class="feat"><div class="feat-icon pink">&#9878;</div><h3>Weight &amp; Progress Tracking</h3><p>Chart your weight alongside medication data. See correlations between dose changes and weight trends to understand how your GLP-1 medication is working.</p></article>
+    <article class="feat"><div class="feat-icon red">&#129298;</div><h3>Side Effects with Clinical Context</h3><p>Log symptoms and see how common they are based on clinical trial data. Get self-care tips sourced from official prescribing information for medications like Ozempic and Mounjaro.</p></article>
+    <article class="feat"><div class="feat-icon amber">&#127828;</div><h3>Food Noise Tracker</h3><p>Rate your food noise (appetite cravings) on a 0&ndash;10 scale daily. Track how GLP-1 medications reduce intrusive food thoughts over time with clear trend charts.</p></article>
+    <article class="feat"><div class="feat-icon cyan">&#127973;</div><h3>Health Data Sync</h3><p>Connect Apple Health or Google Health Connect to pull in steps, calories burned, nutrition data, heart rate, and sleep &mdash; all alongside your GLP-1 tracking in one app.</p></article>
+    <article class="feat"><div class="feat-icon green">&#128203;</div><h3>Doctor Reports</h3><p>Generate professional PDF summaries to share with your healthcare provider. Includes your dose timeline, weight trajectory, side effect patterns, and medication adherence data.</p></article>
   </div>
 </section>
 
@@ -437,19 +362,19 @@ footer{padding:2.5rem 2rem;border-top:1px solid var(--border);background:var(--c
   <div class="science-inner">
     <div>
       <div class="s-label">The Science</div>
-      <div class="s-title">Understand what’s happening inside your body</div>
-      <p class="s-sub" style="margin-top:.75rem">Our Serum Level Estimator uses published pharmacokinetic data — half-lives, bioavailability, and absorption rates — to model your medication concentration over time.</p>
-      <p class="s-sub" style="margin-top:.75rem">Based on the same data your doctor references, presented in a way you can actually understand.</p>
-      <p style="color:var(--text3);font-size:.75rem;margin-top:1.25rem;font-style:italic">For informational purposes only. Titra does not provide medical advice. Always consult your healthcare provider.</p>
+      <h2 class="s-title">Understand what's happening inside your body</h2>
+      <p class="s-sub" style="margin-top:.75rem">Titra's Serum Level Estimator uses published pharmacokinetic data &mdash; including half-lives, bioavailability, and absorption rates &mdash; to model your estimated medication concentration over time. For example, semaglutide (Ozempic, Wegovy) has a half-life of approximately 7 days, while tirzepatide (Mounjaro, Zepbound) has a half-life of about 5 days.</p>
+      <p class="s-sub" style="margin-top:.75rem">Based on the same pharmacokinetic data your doctor references, presented visually so you can understand your medication levels between doses.</p>
+      <p style="color:var(--text3);font-size:.75rem;margin-top:1.25rem;font-style:italic">For informational purposes only. Titra does not provide medical advice, diagnosis, or treatment. Always consult your healthcare provider.</p>
     </div>
-    <div class="science-graph">
+    <div class="science-graph" role="img" aria-label="Animated chart showing medication serum level decay curve over 7 days, from peak concentration after dose injection through therapeutic range to trough level">
       <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs><linearGradient id="cg" x1="0" y1="0" x2="400" y2="0"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#0891b2"/></linearGradient><linearGradient id="fg" x1="0" y1="0" x2="0" y2="240"><stop offset="0%" stop-color="#0d9488" stop-opacity="0.15"/><stop offset="100%" stop-color="#0d9488" stop-opacity="0"/></linearGradient></defs>
         <line x1="0" y1="60" x2="400" y2="60" stroke="#e2e8f0"/><line x1="0" y1="120" x2="400" y2="120" stroke="#e2e8f0"/><line x1="0" y1="180" x2="400" y2="180" stroke="#e2e8f0"/>
         <text x="8" y="55" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Peak</text>
         <text x="8" y="115" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Therapeutic</text>
         <text x="8" y="175" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">Trough</text>
-        <text x="340" y="235" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">7 days →</text>
+        <text x="340" y="235" fill="#94a3b8" font-size="10" font-family="Plus Jakarta Sans">7 days &#8594;</text>
         <path d="M0,200 C20,190 40,60 80,50 C120,40 140,70 160,90 C180,110 200,130 220,140 C260,155 300,165 340,172 C370,178 390,182 400,185" stroke="url(#cg)" stroke-width="2.5" fill="none"><animate attributeName="stroke-dasharray" from="0 1000" to="1000 0" dur="2s" fill="freeze"/></path>
         <path d="M0,200 C20,190 40,60 80,50 C120,40 140,70 160,90 C180,110 200,130 220,140 C260,155 300,165 340,172 C370,178 390,182 400,185 L400,240 L0,240 Z" fill="url(#fg)" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="2s" begin="0.5s" fill="freeze"/></path>
         <circle cx="80" cy="50" r="5" fill="#0d9488" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/></circle>
@@ -461,24 +386,66 @@ footer{padding:2.5rem 2rem;border-top:1px solid var(--border);background:var(--c
 
 <div class="meds" id="medications">
   <div class="s-label">Supported Medications</div>
-  <div class="s-title">Works with all GLP-1 medications</div>
-  <p class="s-sub" style="margin:0 auto">Injections and oral formulations with accurate pharmacokinetic data.</p>
+  <h2 class="s-title">Works with all major GLP-1 medications</h2>
+  <p class="s-sub" style="margin:0 auto">Titra supports both injectable and oral GLP-1 receptor agonist formulations with accurate pharmacokinetic data for each medication.</p>
   <div class="med-pills">
-    <span class="med-pill">Ozempic</span><span class="med-pill">Wegovy</span><span class="med-pill">Mounjaro</span><span class="med-pill">Zepbound</span><span class="med-pill">Rybelsus</span><span class="med-pill">Wegovy Pill</span><span class="med-pill">Semaglutide (Generic)</span><span class="med-pill">Orforglipron</span>
+    <span class="med-pill">Ozempic (semaglutide)</span><span class="med-pill">Wegovy (semaglutide)</span><span class="med-pill">Mounjaro (tirzepatide)</span><span class="med-pill">Zepbound (tirzepatide)</span><span class="med-pill">Rybelsus (oral semaglutide)</span><span class="med-pill">Wegovy Pill</span><span class="med-pill">Semaglutide (Generic)</span><span class="med-pill">Orforglipron</span>
   </div>
 </div>
 
-<section class="cta" id="download">
-  <h2>Start tracking your<br><em>medication journey</em></h2>
-  <p>Free to download. Premium features available with titra+.</p>
-  <div class="hero-btns">
-    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
+<!-- FAQ Section — structured for LLM discoverability -->
+<section class="faq-section" id="faq">
+  <div class="s-label">Frequently Asked Questions</div>
+  <h2 class="s-title">Common questions about Titra</h2>
+
+  <div class="faq-item">
+    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What is Titra?</div>
+    <div class="faq-a">Titra is a free mobile app for iOS and Android designed specifically for people taking GLP-1 receptor agonist medications like Ozempic, Wegovy, Mounjaro, Zepbound, and Rybelsus. It helps you track doses, visualize your estimated serum levels using pharmacokinetic modeling, rotate injection sites safely, log side effects with clinical context, monitor weight changes, track food noise reduction, and generate PDF reports to share with your doctor.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">How does Titra's serum level estimator work?</div>
+    <div class="faq-a">Titra's Serum Level Estimator uses published pharmacokinetic data to model your estimated medication blood concentration over time. It factors in each medication's specific half-life (for example, semaglutide has a half-life of approximately 7 days, while tirzepatide's is about 5 days), bioavailability, and absorption rates. After you log a dose, the estimator calculates the decay curve to show your estimated level at any point. This is for informational purposes only &mdash; always consult your healthcare provider about your medication levels.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Which GLP-1 medications does Titra support?</div>
+    <div class="faq-a">Titra supports all major GLP-1 receptor agonist medications including: Ozempic (semaglutide injection for type 2 diabetes), Wegovy (semaglutide injection for weight management), Mounjaro (tirzepatide for type 2 diabetes), Zepbound (tirzepatide for weight management), Rybelsus (oral semaglutide), Wegovy Pill (oral semaglutide for weight management), generic semaglutide, and orforglipron. Each medication has its own pharmacokinetic profile for accurate serum level estimation.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Is Titra free?</div>
+    <div class="faq-a">Yes. Titra is free to download and the core features &mdash; dose tracking, injection site rotation, weight logging, side effect tracking, and food noise monitoring &mdash; are all free. An optional titra+ premium subscription is available for advanced features like the Serum Level Estimator, enhanced reports, and health data sync with Apple Health and Google Health Connect.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Is my health data private?</div>
+    <div class="faq-a">Yes. Titra is designed to be private by default. All health data is stored locally on your device and is never sold or shared with third parties. Titra contains no ads and is GDPR compliant. You can delete all of your data at any time from within the app settings. If you choose to enable optional cloud backup, your data is encrypted.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">What is food noise and why does Titra track it?</div>
+    <div class="faq-a">Food noise refers to persistent, intrusive thoughts about food and eating that many people experience. One of the most commonly reported benefits of GLP-1 medications like Ozempic and Mounjaro is a significant reduction in food noise. Titra lets you rate your food noise daily on a 0&ndash;10 scale and charts the trend over time, giving you a clear picture of how your medication is affecting your appetite and food-related thoughts.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" role="button" tabindex="0" aria-expanded="false">Why is injection site rotation important?</div>
+    <div class="faq-a">Rotating injection sites prevents lipodystrophy &mdash; changes in the fat tissue under the skin that can affect how well your body absorbs medication. Injecting in the same spot repeatedly can lead to lumps, scarring, or reduced medication effectiveness. Titra's injection site rotation feature provides a visual body map with 14 zones, tracks where you last injected, and warns you if you're about to use a site too soon or too close to your navel (which should be avoided for subcutaneous injections).</div>
   </div>
 </section>
 
+<section class="cta" id="download">
+  <h2>Start tracking your<br><em>GLP-1 medication journey</em></h2>
+  <p>Free to download on iOS and Android. No account required to get started.</p>
+  <div class="hero-btns">
+    <a href="https://apps.apple.com/app/titra-glp-1-companion/id6742448663" class="btn-p" aria-label="Download Titra on the App Store"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.titra.app" class="btn-s" aria-label="Download Titra on Google Play"><svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.395 12l2.302-2.492zM5.864 2.658L16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>Google Play</a>
+  </div>
+</section>
+</main>
+
 <footer>
-  <div class="disclaimer">Titra is a wellness and tracking application. It does not provide medical advice, diagnosis, or treatment. The Serum Level Estimator provides estimates for informational purposes only. Always consult your healthcare provider regarding your medication.</div>
+  <div class="disclaimer">Titra is a wellness and tracking application. It does not provide medical advice, diagnosis, or treatment. The Serum Level Estimator provides estimates for informational purposes only based on published pharmacokinetic data. Always consult your healthcare provider regarding your medication. Titra is not affiliated with Novo Nordisk, Eli Lilly, or any pharmaceutical manufacturer.</div>
   <div class="footer-inner" style="margin-top:1.5rem">
     <a href="#" class="logo" style="font-size:1.1rem">titra</a>
     <div class="footer-links">
@@ -487,14 +454,29 @@ footer{padding:2.5rem 2rem;border-top:1px solid var(--border);background:var(--c
       <a href="mailto:info@titrapp.com">Support</a>
       <a href="mailto:info@titrapp.com">Contact</a>
     </div>
-    <div class="footer-copy">© 2026 Titra. All rights reserved.</div>
+    <div class="footer-copy">&copy; 2026 Titra. All rights reserved.</div>
   </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
+  // Scroll reveal animations
   const o=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:.1});
   document.querySelectorAll('.feat,.science-inner>div,.med-pills').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(24px)';el.style.transition='opacity .5s ease,transform .5s ease';o.observe(el)});
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.parentElement;
+      const wasOpen=item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+      // Toggle clicked
+      if(!wasOpen) item.classList.add('open');
+      q.setAttribute('aria-expanded',!wasOpen);
+    });
+    q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();q.click()}});
+  });
 });
 </script>
 </body>
