@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>titra — Delete Your Account and Data</title>
+  <meta name="description" content="How to delete your titra account and all associated data, either from inside the app or by email request.">
+  <link rel="canonical" href="https://titrapp.com/delete-account.html">
+  <style>
+    body { font-family: -apple-system, system-ui, 'Segoe UI', sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.7; color: #1e293b; background: #fafafa; }
+    h1 { color: #0f172a; font-size: 1.8rem; }
+    h2 { color: #334155; margin-top: 2rem; font-size: 1.2rem; }
+    p { margin: 0.8rem 0; }
+    a { color: #0ea5e9; }
+    .updated { color: #64748b; font-size: 0.9rem; }
+    .container { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 1rem 0; }
+    th { padding: 8px 10px; border: 1px solid #e2e8f0; background: #f1f5f9; text-align: left; }
+    td { padding: 8px 10px; border: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #fafafa; }
+    ol, ul { padding-left: 1.4rem; line-height: 2; }
+    .callout { background: #f0f9ff; border-left: 3px solid #0ea5e9; padding: 0.8rem 1rem; margin: 1.2rem 0; border-radius: 0 6px 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Delete Your titra Account and Data</h1>
+    <p class="updated">Last updated: 30 October 2026</p>
+
+    <p>This page explains how to delete your titra account and everything stored with it. It applies to the titra app published by AgentM on Google Play and the Apple App Store (<code>com.titra.app</code>).</p>
+
+    <div class="callout">
+      <p style="margin:0"><strong>If you never created an account, there is nothing to delete on our side.</strong> titra works fully offline without an account. In that case all of your data lives only on your phone, and uninstalling the app removes it.</p>
+    </div>
+
+    <h2>Option 1 — Delete from inside the app (fastest)</h2>
+    <ol>
+      <li>Open titra and go to the <strong>You</strong> tab.</li>
+      <li>Tap <strong>Cloud backup</strong>, make sure you are signed in, then tap <strong>Delete account</strong>.</li>
+      <li>Confirm when prompted.</li>
+    </ol>
+    <p>If you are signed out, sign in first so the app knows which cloud account to delete, or use Option 2 below.</p>
+    <p>Deletion runs immediately. Your cloud data is removed first, then your sign-in account. If any part fails, nothing is deleted and you can safely try again.</p>
+
+    <h2>Option 2 — Request deletion by email</h2>
+    <p>If you can no longer sign in — for example you lost access to the email address or Apple ID you signed up with — email <a href="mailto:info@titrapp.com?subject=Account%20deletion%20request">info@titrapp.com</a> from the address associated with your account, with the subject <em>Account deletion request</em>.</p>
+    <p>We will verify the request, action it, and confirm by reply. We aim to complete verified requests within 30 days, as required under UK GDPR and EU GDPR.</p>
+
+    <h2>What gets deleted</h2>
+    <table>
+      <thead>
+        <tr><th>Data</th><th>What happens</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dose log, injection sites, pain scores and notes</td><td>Permanently deleted</td></tr>
+        <tr><td>Weight entries</td><td>Permanently deleted</td></tr>
+        <tr><td>Side effect entries</td><td>Permanently deleted</td></tr>
+        <tr><td>Treatment settings stored in the cloud</td><td>Permanently deleted</td></tr>
+        <tr><td>Your account record (email address and account ID)</td><td>Permanently deleted</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What is not deleted, and why</h2>
+    <ul>
+      <li><strong>Data on your own phone.</strong> Deleting your account removes what is stored in the cloud; your log stays on your phone so titra keeps working without an account. To remove it too, use <strong>You → Delete all data</strong> or uninstall the app.</li>
+      <li><strong>Your subscription.</strong> Subscriptions are billed by Apple or Google, not by us, and deleting your account does not cancel one. Cancel through the App Store or Google Play <em>before</em> deleting, otherwise billing continues. See <a href="https://support.apple.com/en-gb/HT202039">Apple</a> or <a href="https://support.google.com/googleplay/answer/7018481">Google</a>.</li>
+      <li><strong>Promo code redemption records.</strong> A redeemed code stays marked as used so it cannot be reused. The record currently keeps your account identifier; email us and we will remove it.</li>
+      <li><strong>Purchase history held by RevenueCat.</strong> Our subscription provider keeps your purchase records under your account identifier, as needed for billing and refunds. Email us to request their deletion.</li>
+      <li><strong>Crash reports and analytics.</strong> Crash reports (Firebase Crashlytics) are kept for 90 days and may carry your account identifier; email us to have them removed sooner. Usage analytics (only if you switched them on) are not linked to your account and expire under Google Analytics retention. You can switch analytics off at any time in the app.</li>
+      <li><strong>Records we must keep by law.</strong> Where a legal or accounting obligation requires retention, we keep only the minimum for the required period.</li>
+    </ul>
+
+    <h2>How long deletion takes</h2>
+    <p>In-app deletion is immediate and irreversible. Email requests are actioned once verified and within 30 days at the latest. Routine backups may retain copies for a short period before rolling off; those copies are not used for any other purpose.</p>
+
+    <h2>Questions</h2>
+    <p>Contact <a href="mailto:info@titrapp.com">info@titrapp.com</a>. See also our <a href="/privacy-policy.html">Privacy Policy</a> and <a href="/terms-of-service.html">Terms of Service</a>.</p>
+  </div>
+</body>
+</html>
