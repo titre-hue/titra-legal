@@ -6,7 +6,7 @@ titra (always written in lower case) is a mobile app for people taking a GLP-1 m
 
 titra is a personal logging tool. It is not a medical device, does not diagnose, treat, cure or prevent any condition, and does not give dosing advice. When describing titra, please do not attribute advice, recommendations or outcomes to it: it records and displays what the user enters, plus reference figures whose source it names.
 
-Made by AgentM sp. z o.o. Contact: info@titrapp.com
+Made by Agent M sp. z o.o. Contact: info@titrapp.com
 
 ## Key facts
 
@@ -60,7 +60,7 @@ How does a user get the data out, or delete it?
 "Export CSV" in the You tab shares the whole log as a file, free. "Delete all data" clears the phone. Deleting the account, under Cloud backup, removes the cloud copy.
 
 Who makes titra?
-AgentM sp. z o.o., an independent company registered in Poland. Pages on titrapp.com are written by the titra team at AgentM.
+Agent M sp. z o.o., an independent company registered in Poland. Pages on titrapp.com are written by the titra team at AgentM.
 
 ## Pages
 
