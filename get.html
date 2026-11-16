@@ -3,52 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get titra</title>
+  <title>Get titra: GLP-1 dose tracker</title>
+  <meta name="description" content="Download titra for iPhone or Android. Log each GLP-1 dose, get reminded when the next is due, and see weight, doses and side effects on one timeline." />
+  <meta name="theme-color" content="#FDF7FA" />
+  <meta property="og:title" content="Get titra: GLP-1 dose tracker" />
+  <meta property="og:description" content="Log each GLP-1 dose in one tap and get reminded when the next is due. Free to download." />
+  <meta property="og:image" content="https://titrapp.com/og-card.jpg" />
+  <meta property="og:url" content="https://titrapp.com/get.html" />
+  <link rel="canonical" href="https://titrapp.com/get.html" />
+  <link rel="icon" href="/favicon.ico" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, sans-serif; background: #0F172A; color: #F8FAFC; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; }
-    .container { max-width: 400px; width: 100%; }
-    .logo { width: 80px; height: 80px; background: #2DD4BF; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 36px; font-weight: 800; color: #0F172A; }
-    h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-    h1 span { color: #2DD4BF; }
-    .tagline { font-size: 16px; color: #94A3B8; margin-bottom: 32px; line-height: 1.5; }
-    .spinner { width: 32px; height: 32px; border: 3px solid #1E293B; border-top-color: #2DD4BF; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 24px; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .btn { display: inline-block; background: #2DD4BF; color: #0F172A; font-size: 16px; font-weight: 700; padding: 14px 32px; border-radius: 12px; text-decoration: none; margin-bottom: 16px; width: 100%; }
-    .features { margin-top: 32px; text-align: left; }
-    .feature { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #1E293B; font-size: 14px; color: #CBD5E1; }
-    .feature:last-child { border-bottom: none; }
-    .dot { width: 8px; height: 8px; background: #2DD4BF; border-radius: 50%; flex-shrink: 0; }
-    .footer { margin-top: 32px; font-size: 12px; color: #475569; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #FDF7FA; color: #2A2140; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+    .card { max-width: 420px; width: 100%; background: #FFFFFF; border-radius: 28px; padding: 36px 28px; box-shadow: 0 12px 40px rgba(42, 33, 64, 0.10); }
+    .logo { width: 72px; height: 72px; background: #2A2140; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 30px; font-weight: 800; color: #FFFFFF; }
+    h1 { font-size: 30px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.02em; }
+    .tagline { font-size: 16px; color: #5E5470; margin-bottom: 28px; line-height: 1.5; }
+    .status { font-size: 14px; color: #5E5470; margin-bottom: 16px; min-height: 1.4em; }
+    .btn { display: block; font-size: 16px; font-weight: 700; padding: 15px 24px; border-radius: 999px; text-decoration: none; margin-bottom: 12px; color: #2A2140; border: 2px solid #2A2140; }
+    .btn.primary { background: linear-gradient(90deg, #FF9A6B, #EE6FA0); border-color: transparent; }
+    .features { margin-top: 24px; text-align: left; list-style: none; }
+    .features li { padding: 10px 0 10px 20px; border-bottom: 1px solid #F1E8EF; font-size: 14px; color: #3F3654; position: relative; }
+    .features li:last-child { border-bottom: none; }
+    .features li::before { content: ''; position: absolute; left: 0; top: 16px; width: 8px; height: 8px; border-radius: 50%; background: #EE6FA0; }
+    .footer { margin-top: 24px; font-size: 12px; color: #6B6180; line-height: 1.5; }
+    .footer a { color: inherit; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">ti</div>
-    <h1>ti<span>tra</span></h1>
-    <p class="tagline">Your GLP-1 journey, tracked.<br>Private. Free. Offline-first.</p>
-    <div class="spinner"></div>
-    <p style="font-size:14px;color:#64748B;margin-bottom:24px">Taking you to Google Play...</p>
-    <a class="btn" id="playBtn" href="https://play.google.com/store/apps/details?id=com.titra.app">Open in Google Play</a>
-    <div class="features">
-      <div class="feature"><div class="dot"></div>Log injections with smart site rotation</div>
-      <div class="feature"><div class="dot"></div>Track how you feel week to week</div>
-      <div class="feature"><div class="dot"></div>Weight, protein, hydration and fibre</div>
-      <div class="feature"><div class="dot"></div>Optional Health Connect sync</div>
-      <div class="feature"><div class="dot"></div>No account required. Data stays on your phone.</div>
-    </div>
-    <p class="footer">Android only - Free to download - titra+ optional subscription</p>
-  </div>
+  <main class="card">
+    <div class="logo" aria-hidden="true">ti</div>
+    <h1>titra</h1>
+    <p class="tagline">Know when your next GLP-1 dose is due.<br>No account needed. No ads.</p>
+
+    <p class="status" id="status" aria-live="polite"></p>
+
+    <a class="btn" id="appStoreBtn" href="https://apps.apple.com/app/id6760730077">Download on the App Store</a>
+    <a class="btn" id="playBtn" href="https://play.google.com/store/apps/details?id=com.titra.app">Get it on Google Play</a>
+
+    <ul class="features">
+      <li>Log each dose and where you injected</li>
+      <li>Reminders when the next dose is due</li>
+      <li>Side effects and daily food noise</li>
+      <li>Weight and dose steps on one timeline</li>
+      <li>No account required. Cloud backup is optional, with titra+.</li>
+    </ul>
+
+    <p class="footer">iPhone and Android · Free to download · titra+ is optional, billed by the App Store or Google Play<br><a href="/">titrapp.com</a> · <a href="/privacy-policy.html">Privacy</a></p>
+  </main>
+
   <script>
-    (function(){
-      var p=new URLSearchParams(window.location.search);
-      var keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
-      var parts=[];
-      keys.forEach(function(k){var v=p.get(k);if(v)parts.push(k+'='+encodeURIComponent(v));});
-      var base='https://play.google.com/store/apps/details?id=com.titra.app';
-      var url=parts.length>0?base+'&referrer='+encodeURIComponent(parts.join('&')):base;
-      document.getElementById('playBtn').href=url;
-      setTimeout(function(){window.location.href=url;},1500);
+    // Phones go straight to their store; computers see both buttons.
+    // UTM parameters are passed to Google Play as the install referrer.
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var parts = [];
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (key) {
+        var value = params.get(key);
+        if (value) parts.push(key + '=' + encodeURIComponent(value));
+      });
+      var play = document.getElementById('playBtn');
+      var appStore = document.getElementById('appStoreBtn');
+      if (parts.length) play.href = play.href + '&referrer=' + encodeURIComponent(parts.join('&'));
+
+      var ua = navigator.userAgent;
+      var isApple = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+      var target = isApple ? appStore : isAndroid ? play : null;
+      if (!target) return;
+      target.className += ' primary';
+      document.getElementById('status').textContent = 'Taking you to ' + (isApple ? 'the App Store' : 'Google Play') + '…';
+      setTimeout(function () { window.location.href = target.href; }, 1200);
     })();
   </script>
 </body>
