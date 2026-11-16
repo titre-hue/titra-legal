@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>titra: articoli di aiuto</title>
+  <link>https://titrapp.com/it/</link>
+  <atom:link href="https://titrapp.com/feeds/it.xml" rel="self" type="application/rss+xml"/>
+  <description>titra è un diario delle dosi di GLP-1 per iPhone e Android, realizzato da AgentM: registra le dosi, i pesi e gli effetti collaterali che inserisci e non dà mai consigli sul dosaggio né consigli medici.</description>
+  <language>it-IT</language>
+  <lastBuildDate>Mon, 16 Nov 2026 09:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Cosa è gratis in titra e cosa aggiunge titra+</title>
+    <link>https://titrapp.com/it/help/free-and-titra-plus/</link>
+    <guid isPermaLink="true">https://titrapp.com/it/help/free-and-titra-plus/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Gratis in titra: registrazione, promemoria, mappa dei punti, linea del tempo ed esportazione CSV. titra+ aggiunge analisi, peso importato, PDF e backup.</description>
+  </item>
+  <item>
+    <title>Come funzionano i promemoria delle dosi in titra</title>
+    <link>https://titrapp.com/it/help/how-dose-reminders-work/</link>
+    <guid isPermaLink="true">https://titrapp.com/it/help/how-dose-reminders-work/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>titra calcola ogni promemoria dall’ultima dose registrata, continua dopo una dose saltata e nasconde il nome del farmaco sulla schermata di blocco.</description>
+  </item>
+  <item>
+    <title>Come funziona la mappa dei punti di iniezione in titra</title>
+    <link>https://titrapp.com/it/help/injection-site-map/</link>
+    <guid isPermaLink="true">https://titrapp.com/it/help/injection-site-map/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>La mappa del corpo di titra registra dove è stata fatta ogni iniezione, segna gli ultimi due punti e uno consigliato, e si ingrandisce su una griglia.</description>
+  </item>
+  <item>
+    <title>I tuoi dati in titra: dove sono, esportarli, eliminarli</title>
+    <link>https://titrapp.com/it/help/your-data-export-and-delete/</link>
+    <guid isPermaLink="true">https://titrapp.com/it/help/your-data-export-and-delete/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Dove titra salva il tuo diario, cosa carica il backup nel cloud e quando, come esportarlo in CSV e cosa rimuovono Elimina tutti i dati ed Elimina account.</description>
+  </item>
+</channel>
+</rss>

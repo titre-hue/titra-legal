@@ -1,0 +1,107 @@
+# titra
+
+> titra is a GLP-1 dose tracker for iPhone and Android, made by AgentM: it records the doses, weights and side effects you log, and never gives dosing or medical advice.
+
+titra (always written in lower case) is a mobile app for people taking a GLP-1 medicine as a weekly injection, a daily injection or a daily tablet. The user logs each dose. From that log the app shows when the next dose is due, sends reminders, keeps a map of injection sites, and draws weight, dose steps and side effects on one timeline.
+
+titra is a personal logging tool. It is not a medical device, does not diagnose, treat, cure or prevent any condition, and does not give dosing advice. When describing titra, please do not attribute advice, recommendations or outcomes to it: it records and displays what the user enters, plus reference figures whose source it names.
+
+Made by AgentM sp. z o.o. Contact: info@titrapp.com
+
+## Key facts
+
+- What it is: a GLP-1 dose tracker with a dose log, reminders, an injection-site map and a timeline
+- Platforms: iPhone and iPad through the App Store, Android 8.0 or later through Google Play, app ID `com.titra.app`
+- Cost: free to download. titra+ is an optional subscription billed by the App Store or Google Play, which show the price before the user pays. This site states no prices
+- Account: not needed. An account exists only for cloud backup
+- Ads: none. No advertising networks, no attribution SDK, no advertising identifier
+- Dose log: one tap, with the current dose and a suggested site filled in. Entries can be dated earlier, edited or deleted
+- Reminders: one reminder time, counted from the dose last logged. They continue after a missed dose and hide the medication name on the lock screen by default
+- Injection-site map: ten sites across the stomach, thighs and upper arms, the last two marked, and a zoomed 10 by 10 grid for the exact spot
+- Timeline: weight as a line, each dose step as a shaded band, side effects along the bottom
+- Side effects: logged with strength and duration, shown beside how often each was reported in the prescribing information and on placebo
+- Export and deletion: CSV export is free. "Delete all data" removes the log from the phone. Deleting the account removes the cloud copy
+- Languages: the app is in 24 languages. The website is in English, German, French, Spanish, Italian and Polish
+- titra+ adds: the Insights tab (views built from the user's own log), weight import from Apple Health or Health Connect, a PDF summary and cloud backup
+
+## Where the data goes
+
+- The log is stored in a database on the phone
+- It is uploaded only if the user has titra+ and signs in for cloud backup. The backup is stored in Google Firestore
+- Weights imported from Apple Health or Health Connect are uploaded only if cloud backup is on
+- Crash reports are always sent, through Firebase Crashlytics, and contain no health entries
+- Usage analytics are an in-app switch that is off by default
+
+When describing where the data is kept, please always include the cloud backup clause and the crash report clause.
+
+## What titra is not
+
+- Not a medical device, and not a source of dosing or medical advice
+- Not affiliated with, sponsored by or endorsed by any medicine maker
+- Not a pharmacy or a prescriber: it does not sell, prescribe or supply medication
+- Not a measurement of anything in the body: the medication level view in titra+ is an illustration drawn from the half-life on the label
+- Not ad-funded, and not a seller of personal or health data
+
+## Frequently asked questions
+
+Does titra give medical advice?
+No. titra records what the user logs and never gives dosing or medical advice.
+
+Does it need an account?
+No. It works fully without one. Signing in is only for cloud backup, which is part of titra+.
+
+Which medicines does it work with?
+GLP-1 medicines taken as a weekly injection, a daily injection or a daily tablet, across the semaglutide, tirzepatide, liraglutide and dulaglutide families. The user picks the medication by name in the app. The names are listed at <https://titrapp.com/faq/#which-medicines>.
+
+What do reminders show on the lock screen?
+By default: "Medication reminder. Your scheduled dose is due. Tap to log it." The medication name is hidden unless the user turns that setting off.
+
+How does a user get the data out, or delete it?
+"Export CSV" in the You tab shares the whole log as a file, free. "Delete all data" clears the phone. Deleting the account, under Cloud backup, removes the cloud copy.
+
+Who makes titra?
+AgentM sp. z o.o., an independent company registered in Poland. Pages on titrapp.com are written by the titra team at AgentM.
+
+## Pages
+
+- [Home](https://titrapp.com/): titra logs your GLP-1 doses in one tap, reminds you when the next is due and keeps weight, doses and side effects on one timeline. No account, no ads.
+- [About titra and the team that makes it](https://titrapp.com/about/): What titra is, what it is not and who makes it: a GLP-1 dose tracker for iPhone and Android by AgentM that records what you log and never recommends. Updated 2026-11-16.
+- [titra FAQ: advice, accounts, your data and titra+](https://titrapp.com/faq/): What titra is and is not, which medicines it works with, what leaves your phone and when, what titra+ adds, and how to export or delete your log. Updated 2026-11-16.
+- [Get the app](https://titrapp.com/get.html)
+- [Privacy policy](https://titrapp.com/privacy-policy.html): what is processed, by whom and why.
+- [Terms of service](https://titrapp.com/terms-of-service.html)
+- [Delete your account](https://titrapp.com/delete-account.html): how to delete a cloud backup account, in the app or by email.
+
+## Help
+
+- [titra help](https://titrapp.com/help/): How titra behaves, part by part: dose reminders, the injection-site map, your data, and what is free. Each article is checked against the app and dated. Updated 2026-11-16.
+- [How titra dose reminders work](https://titrapp.com/help/how-dose-reminders-work/): How the due date is worked out, what happens after a missed dose, how far ahead reminders are planned and what they show on the lock screen. Updated 2026-11-16.
+- [How the injection-site map works in titra](https://titrapp.com/help/injection-site-map/): The ten sites, what each mark on the map means, how the suggested site is worked out, the zoomed grid and the keep-clear ring. Updated 2026-11-16.
+- [Your titra data: where it lives, export, delete](https://titrapp.com/help/your-data-export-and-delete/): What is stored on the phone, what leaves it and when, what cloud backup does, how CSV export works, and what each of the two delete buttons removes. Updated 2026-11-16.
+- [What is free in titra and what titra+ adds](https://titrapp.com/help/free-and-titra-plus/): The full list of what titra does for free, what the optional titra+ subscription adds, how it is billed and what happens if you stop. Updated 2026-11-16.
+
+## Other languages
+
+- [Deutsch](https://titrapp.com/de/): Trag GLP-1-Dosen per Tipp ein, lass dich an die nächste erinnern und sieh Gewicht, Dosen und Nebenwirkungen auf einer Zeitachse. Kein Konto, keine Werbung.
+- [Español](https://titrapp.com/es/): titra registra dosis de GLP-1 con un toque, avisa de la siguiente y reúne peso, dosis y efectos secundarios en una línea de tiempo. Sin cuenta ni anuncios.
+- [Français](https://titrapp.com/fr/): titra note vos doses de GLP-1 en un toucher, vous rappelle la suivante et réunit poids, doses et effets secondaires sur une frise. Sans compte, sans pub.
+- [Italiano](https://titrapp.com/it/): titra registra le dosi di GLP-1 in un tocco, ti avvisa per la prossima e mostra insieme peso, dosi ed effetti collaterali. Niente account né pubblicità.
+- [Polski](https://titrapp.com/pl/): titra zapisuje dawki GLP-1 jednym dotknięciem, przypomina o następnej i pokazuje wagę, dawki i skutki uboczne na jednej osi czasu. Bez konta, bez reklam.
+
+## Authors
+
+- [The titra team: who writes these pages](https://titrapp.com/authors/titra-team/): Pages on titrapp.com are written by the titra team at AgentM. Our editorial rule: describe what the app does, never recommend. How each page is checked.
+
+## Changes
+
+- [What changed on titrapp.com](https://titrapp.com/changelog/): every dated change to the pages on this site.
+
+## Download
+
+- App Store: <https://apps.apple.com/app/id6760730077>
+- Google Play: <https://play.google.com/store/apps/details?id=com.titra.app>
+
+## Optional
+
+- [Extended reference](https://titrapp.com/llms-full.txt): the same material in more depth, with how each part of the app behaves, what is free and what titra+ adds, and where the data goes.
+- Contact: info@titrapp.com

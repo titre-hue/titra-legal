@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>titra: artykuły pomocy</title>
+  <link>https://titrapp.com/pl/</link>
+  <atom:link href="https://titrapp.com/feeds/pl.xml" rel="self" type="application/rss+xml"/>
+  <description>titra to dziennik dawek GLP-1 na iPhone’a i Androida, tworzony przez AgentM: zapisuje wpisane przez Ciebie dawki, pomiary wagi i skutki uboczne i nigdy nie doradza w sprawie dawkowania ani nie udziela porad medycznych.</description>
+  <language>pl-PL</language>
+  <lastBuildDate>Mon, 16 Nov 2026 09:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Co jest darmowe w titra, a co dodaje titra+</title>
+    <link>https://titrapp.com/pl/help/free-and-titra-plus/</link>
+    <guid isPermaLink="true">https://titrapp.com/pl/help/free-and-titra-plus/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Zapisywanie, przypomnienia, mapa miejsc, oś czasu i eksport CSV są w titra darmowe. titra+ dodaje analizy, import wagi, podsumowanie PDF i kopię w chmurze.</description>
+  </item>
+  <item>
+    <title>Jak działają przypomnienia o dawce w titra</title>
+    <link>https://titrapp.com/pl/help/how-dose-reminders-work/</link>
+    <guid isPermaLink="true">https://titrapp.com/pl/help/how-dose-reminders-work/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>titra liczy każde przypomnienie od ostatniej zapisanej dawki, przypomina dalej po pominiętej dawce i domyślnie ukrywa nazwę leku na ekranie blokady.</description>
+  </item>
+  <item>
+    <title>Jak działa mapa miejsc zastrzyku w titra</title>
+    <link>https://titrapp.com/pl/help/injection-site-map/</link>
+    <guid isPermaLink="true">https://titrapp.com/pl/help/injection-site-map/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Mapa ciała w titra zapisuje, gdzie trafił każdy zastrzyk, zaznacza dwa ostatnie miejsca i proponowane następne oraz powiększa siatkę do dokładnego miejsca.</description>
+  </item>
+  <item>
+    <title>Twoje dane w titra: gdzie są, eksport, usuwanie</title>
+    <link>https://titrapp.com/pl/help/your-data-export-and-delete/</link>
+    <guid isPermaLink="true">https://titrapp.com/pl/help/your-data-export-and-delete/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Gdzie titra przechowuje dziennik, co i kiedy wysyła kopia w chmurze, jak go wyeksportować do CSV i co usuwają Usuń wszystkie dane oraz Usuń konto.</description>
+  </item>
+</channel>
+</rss>

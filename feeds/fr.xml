@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>titra : articles d’aide</title>
+  <link>https://titrapp.com/fr/</link>
+  <atom:link href="https://titrapp.com/feeds/fr.xml" rel="self" type="application/rss+xml"/>
+  <description>titra est un outil de suivi des doses de GLP-1 pour iPhone et Android, créé par AgentM : il enregistre les doses, les poids et les effets secondaires que vous notez, et ne donne jamais de conseil de dosage ni de conseil médical.</description>
+  <language>fr-FR</language>
+  <lastBuildDate>Mon, 16 Nov 2026 09:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Ce qui est gratuit dans titra et ce qu’ajoute titra+</title>
+    <link>https://titrapp.com/fr/help/free-and-titra-plus/</link>
+    <guid isPermaLink="true">https://titrapp.com/fr/help/free-and-titra-plus/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>La saisie, les rappels, la carte des zones, la frise et l’export CSV sont gratuits. titra+ ajoute des analyses, l’import du poids, un PDF et la sauvegarde.</description>
+  </item>
+  <item>
+    <title>Comment fonctionnent les rappels de dose de titra</title>
+    <link>https://titrapp.com/fr/help/how-dose-reminders-work/</link>
+    <guid isPermaLink="true">https://titrapp.com/fr/help/how-dose-reminders-work/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>titra cale chaque rappel sur la dernière dose notée, continue après une dose manquée et masque par défaut le nom du médicament sur l’écran verrouillé.</description>
+  </item>
+  <item>
+    <title>Comment fonctionne la carte des zones de piqûre de titra</title>
+    <link>https://titrapp.com/fr/help/injection-site-map/</link>
+    <guid isPermaLink="true">https://titrapp.com/fr/help/injection-site-map/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>La carte du corps de titra note où va chaque piqûre, marque vos deux dernières zones et une zone suggérée, et zoome sur une grille pour l’endroit exact.</description>
+  </item>
+  <item>
+    <title>Vos données titra : stockage, export, suppression</title>
+    <link>https://titrapp.com/fr/help/your-data-export-and-delete/</link>
+    <guid isPermaLink="true">https://titrapp.com/fr/help/your-data-export-and-delete/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Où titra garde votre suivi, ce qu’envoie la sauvegarde cloud et quand, l’export CSV, et ce qu’effacent Supprimer toutes les données et Supprimer le compte.</description>
+  </item>
+</channel>
+</rss>

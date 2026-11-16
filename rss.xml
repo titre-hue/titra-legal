@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>titra: help articles</title>
+  <link>https://titrapp.com/</link>
+  <atom:link href="https://titrapp.com/rss.xml" rel="self" type="application/rss+xml"/>
+  <description>titra is a GLP-1 dose tracker for iPhone and Android, made by AgentM: it records the doses, weights and side effects you log, and never gives dosing or medical advice.</description>
+  <language>en-GB</language>
+  <lastBuildDate>Mon, 16 Nov 2026 09:00:00 GMT</lastBuildDate>
+  <item>
+    <title>What is free in titra and what titra+ adds</title>
+    <link>https://titrapp.com/help/free-and-titra-plus/</link>
+    <guid isPermaLink="true">https://titrapp.com/help/free-and-titra-plus/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Logging, reminders, the site map, the timeline and CSV export are free in titra. titra+ adds insights, weight import, a PDF summary and cloud backup.</description>
+  </item>
+  <item>
+    <title>How titra dose reminders work</title>
+    <link>https://titrapp.com/help/how-dose-reminders-work/</link>
+    <guid isPermaLink="true">https://titrapp.com/help/how-dose-reminders-work/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>titra times each reminder from the dose you last logged, keeps reminding after a missed dose, and hides the medication name on the lock screen by default.</description>
+  </item>
+  <item>
+    <title>How the injection-site map works in titra</title>
+    <link>https://titrapp.com/help/injection-site-map/</link>
+    <guid isPermaLink="true">https://titrapp.com/help/injection-site-map/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>titra&apos;s body map records where each injection went, marks your last two sites and a suggested next one, and zooms in to a grid for the exact spot.</description>
+  </item>
+  <item>
+    <title>Your titra data: where it lives, export, delete</title>
+    <link>https://titrapp.com/help/your-data-export-and-delete/</link>
+    <guid isPermaLink="true">https://titrapp.com/help/your-data-export-and-delete/</guid>
+    <pubDate>Mon, 16 Nov 2026 09:00:00 GMT</pubDate>
+    <description>Where titra stores your log, what cloud backup uploads and when, how to export it as CSV, and what Delete all data and Delete account each remove.</description>
+  </item>
+</channel>
+</rss>
