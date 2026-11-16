@@ -25,12 +25,12 @@
 <body>
   <div class="container">
     <h1>Delete Your titra Account and Data</h1>
-    <p class="updated">Last updated: 30 October 2026</p>
+    <p class="updated">Last updated: 12 November 2026</p>
 
     <p>This page explains how to delete your titra account and everything stored with it. It applies to the titra app published by AgentM on Google Play and the Apple App Store (<code>com.titra.app</code>).</p>
 
     <div class="callout">
-      <p style="margin:0"><strong>If you never created an account, there is nothing to delete on our side.</strong> titra works fully offline without an account. In that case all of your data lives only on your phone, and uninstalling the app removes it.</p>
+      <p style="margin:0"><strong>If you never created an account, there is no account or cloud backup to delete.</strong> titra works fully without an account. In that case your log is stored only on your phone, and uninstalling the app removes it.</p>
     </div>
 
     <h2>Option 1 — Delete from inside the app (fastest)</h2>
@@ -40,7 +40,7 @@
       <li>Confirm when prompted.</li>
     </ol>
     <p>If you are signed out, sign in first so the app knows which cloud account to delete, or use Option 2 below.</p>
-    <p>Deletion runs immediately. Your cloud data is removed first, then your sign-in account. If any part fails, nothing is deleted and you can safely try again.</p>
+    <p>Deletion runs immediately. Your cloud data is removed first, then your sign-in account. If the first step does not complete, your sign-in account is kept so that you can try again.</p>
 
     <h2>Option 2 — Request deletion by email</h2>
     <p>If you can no longer sign in — for example you lost access to the email address or Apple ID you signed up with — email <a href="mailto:info@titrapp.com?subject=Account%20deletion%20request">info@titrapp.com</a> from the address associated with your account, with the subject <em>Account deletion request</em>.</p>
@@ -53,8 +53,9 @@
       </thead>
       <tbody>
         <tr><td>Dose log, injection sites, pain scores and notes</td><td>Permanently deleted</td></tr>
-        <tr><td>Weight entries</td><td>Permanently deleted</td></tr>
+        <tr><td>Weight entries, including weigh-ins imported from Apple Health or Health Connect</td><td>Permanently deleted</td></tr>
         <tr><td>Side effect entries</td><td>Permanently deleted</td></tr>
+        <tr><td>Food-noise ratings</td><td>Permanently deleted</td></tr>
         <tr><td>Treatment settings stored in the cloud</td><td>Permanently deleted</td></tr>
         <tr><td>Your account record (email address and account ID)</td><td>Permanently deleted</td></tr>
       </tbody>
@@ -62,11 +63,11 @@
 
     <h2>What is not deleted, and why</h2>
     <ul>
-      <li><strong>Data on your own phone.</strong> Deleting your account removes what is stored in the cloud; your log stays on your phone so titra keeps working without an account. To remove it too, use <strong>You → Delete all data</strong> or uninstall the app.</li>
+      <li><strong>Data on your own phone.</strong> Deleting your account removes what is stored in the cloud; your log remains on your phone so titra keeps working without an account. To remove it too, use <strong>You → Delete all data</strong> (which also removes the titra 1.x copy of your log, if you updated from 1.x) or uninstall the app.</li>
       <li><strong>Your subscription.</strong> Subscriptions are billed by Apple or Google, not by us, and deleting your account does not cancel one. Cancel through the App Store or Google Play <em>before</em> deleting, otherwise billing continues. See <a href="https://support.apple.com/en-gb/HT202039">Apple</a> or <a href="https://support.google.com/googleplay/answer/7018481">Google</a>.</li>
-      <li><strong>Promo code redemption records.</strong> A redeemed code stays marked as used so it cannot be reused. The record currently keeps your account identifier; email us and we will remove it.</li>
-      <li><strong>Purchase history held by RevenueCat.</strong> Our subscription provider keeps your purchase records under your account identifier, as needed for billing and refunds. Email us to request their deletion.</li>
-      <li><strong>Crash reports and analytics.</strong> Crash reports (Firebase Crashlytics) are kept for 90 days and may carry your account identifier; email us to have them removed sooner. Usage analytics (only if you switched them on) are not linked to your account and expire under Google Analytics retention. You can switch analytics off at any time in the app.</li>
+      <li><strong>Promo code redemption records.</strong> If you redeemed a promo code in titra 1.x, the code stays marked as used so it cannot be reused. The record keeps your account identifier; email us and we will remove it.</li>
+      <li><strong>Purchase history held by RevenueCat.</strong> Our subscription provider keeps your purchase records under your account identifier and, on iPhone and iPad, a device identifier, as needed for billing and refunds. Email us to request their deletion.</li>
+      <li><strong>Crash reports and analytics.</strong> Crash reports (Firebase Crashlytics) are kept for 90 days and may carry your account identifier; email us to have them removed sooner. Usage analytics are collected only if you switched them on (in versions before 2.0.2, Google's library may also have recorded the first time the app was opened). They are not linked to your account and expire under Google Analytics retention. You can switch analytics off at any time in the app.</li>
       <li><strong>Records we must keep by law.</strong> Where a legal or accounting obligation requires retention, we keep only the minimum for the required period.</li>
     </ul>
 
